@@ -16,7 +16,11 @@ app.use(express.urlencoded({extended:true}));
 
 
 app.get('/',(req,res)=>{
-    res.send('hello world');
+  throw new Error("my error")
+  console.log("------------------------------")
+
+  res.send('hello world');
+
   })
 
 
