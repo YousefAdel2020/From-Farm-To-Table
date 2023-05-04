@@ -10,9 +10,9 @@ const dishSchema = new mongoose.Schema({
       type: String,
       required: [true,"please provide the description"]
     },
-    ingerdients:{
+    ingredients:{
         type:[[String]],
-        required: [true,"please provide the ingerdients"]
+        required: [true,"please provide the ingredients"]
     },
     category:{
         type: String,
