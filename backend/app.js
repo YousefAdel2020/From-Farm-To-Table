@@ -1,11 +1,16 @@
 const express=require("express");
 const app=express();
+require("express-async-errors"); 
+
+
 
 const config=require("./config/config");
 
 
 // connectDB
 const connectDB=require('./db/connect');
+const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
+const NotFoundMiddleware = require("./middleware/notFoundMiddleware");
 
 
 // for body-parser
@@ -15,14 +20,12 @@ app.use(express.urlencoded({extended:true}));
 
 
 
-app.get('/',(req,res)=>{
-  throw new Error("my error")
-  console.log("------------------------------")
-
+app.get('/api',(req,res)=>{
   res.send('hello world');
-
   })
 
+app.use(NotFoundMiddleware)
+app.use(errorHandlerMiddleware)
 
 
 const port = config.PORT || 3000;
