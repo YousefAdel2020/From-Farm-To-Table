@@ -9,6 +9,14 @@ const config=require("./config/config");
 
 // connectDB
 const connectDB=require('./db/connect');
+
+
+// routers
+const authRouter=require("./routes/auth");
+
+
+
+// error handler
 const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
 const NotFoundMiddleware = require("./middleware/notFoundMiddleware");
 
@@ -19,10 +27,9 @@ app.use(express.urlencoded({extended:true}));
 
 
 
-
-app.get('/api',(req,res)=>{
-  res.send('hello world');
-  })
+//& Routes
+app.use("/api/v1/auth",authRouter);
+  
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)
