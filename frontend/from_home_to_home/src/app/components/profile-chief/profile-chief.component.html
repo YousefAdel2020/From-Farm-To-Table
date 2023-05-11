@@ -1,14 +1,13 @@
 <div class="box">
     <div class="grid">
         <img src="../../../assets/WhatsApp Image 2023-05-11 at 19.09.42.jpg" class="h-25 ">
-
-        <app-rating-star [rating]="2"></app-rating-star>
-
-
-        <button type="button" class="btn btn-dark">
-            <a class="text-decoration-none" style="color: white;">Edit Profile </a>
+       <app-rating-star [rating]="2"></app-rating-star>
+      <button type="button" class="btn btn-dark">
+            <a class="text-decoration-none" style="color: white;" routerLink="/updateChief">Edit Profile </a>
         </button>
     </div>
+
+
     
     <div class="details">
         <h3 class="fst-italic text-center fs-4">About me </h3>
@@ -17,7 +16,6 @@
             scrambled it to make a type specimen book.
         </div>
         <hr>
-
         <h4> UserName:</h4>
         <p>{{userName}}</p>
 

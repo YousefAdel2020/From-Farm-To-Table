@@ -10,15 +10,17 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { RatingStarComponent } from './components/rating-star/rating-star.component';
+import { UpdateChiefComponent } from './components/update-chief/update-chief.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileChiefComponent,
- 
+    RatingStarComponent,
+    UpdateChiefComponent
 
-    RatingStarComponent
+   
   ],
   imports: [
     BrowserModule,
