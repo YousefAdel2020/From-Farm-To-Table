@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ProfileChiefComponent } from './components/profile-chief/profile-chief.component';
+
+const routes: Routes = [
+
+  {path:'viewChief', component:ProfileChiefComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
