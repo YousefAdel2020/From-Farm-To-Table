@@ -1,0 +1,231 @@
+section{
+    padding: 0;
+}
+
+  .ban_sec {
+    width: 100%;
+    padding: 0;
+  }
+  .ban_img {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+  }
+  .ban_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .ban_text {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    top: 50%;
+    left: 30%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .ban_text strong {
+    font-weight: 700;
+    color:black;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  .ban_text strong span {
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  .ban_text p {
+    font: 400 25px "Roboto Condensed", sans-serif;
+    color:black;
+    margin: 7px 0 25px;
+  }
+  .ban_text a {
+    display: inline-block;
+    font: 800 19.39px/24px "Roboto Condensed", sans-serif;
+    background: #d0b200;
+    border-radius: 26px;
+    color: white;
+    padding: 12px 28px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-decoration:none;
+  }
+  .ban_text a:hover {
+    background: lightgoldenrodyellow;
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .ban_text p {
+      font-size: 21px;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .ban_text p {
+      font-size: 17px;
+    }
+    .ban_text strong {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    .ban_text strong span {
+      font-size: 37px;
+    }
+    .ban_text a {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .ban_text strong {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    .ban_text strong span {
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: 2px;
+    }
+    .ban_text p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .ban_text a {
+      font-size: 13.39px;
+      line-height: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .ban_img img {
+      min-height: 290px;
+      object-fit: cover;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .ban_text strong {
+      background: white;
+      padding: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .ban_text strong span {
+      font-size: 22px;
+      line-height: 31px;
+      letter-spacing: 1px;
+    }
+    .ban_text {
+      left: 2%;
+    }
+  }
+  
+
+  /* why choose us section */
+  .wcu-section{
+    background-color: #fbfbfe;
+    margin-bottom:60px;
+    margin-top:60px;
+    text-align: center;
+    width: 100vw;
+    background-size: cover;
+    
+  }
+  
+  .wcu-heading{
+    font-size:28px;
+    text-align:left;
+    font-weight:850;
+    font-family: "roboto";
+    color: #183b56;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: inline;
+    border-bottom: 3px solid darkgray;
+    text-align: center;
+  }
+  
+  .wcu-para{
+    font-family: "roboto";
+    margin-top: 2%;
+    font-size: 15px;
+    color:#5a7184;
+    padding-bottom: 20px;
+    text-align: left;
+    text-align: center;
+  }
+  
+  .wcu-card{
+    background-color:white;
+    border-style:solid;
+    border-color:#e5eaf4;
+    border-width: 1px;
+    border-radius: 18px;
+  }
+  
+  .wcu-card-image{
+    height: 100px;
+    width: 120px;
+    text-align: center;
+    padding-top: 8px;
+  }
+  
+  .wcu-card-title{
+    font-size:24px;
+    padding: 3px;
+    text-align: center;
+  }
+  
+  .wcu-card-description{
+    color: #7b8794;
+    font-size: 13px;
+    font-family: "roboto";
+    text-align: center;
+  }
+  
+  .offers{
+    font-style: italic;
+    font-weight: 700;
+    color: #e1ad01;
+  }
+  
+  /* about us  */
+  .about-us-section {
+    background-color: #fbfbfe;
+    margin-bottom:60px;
+    margin-top:60px;
+    text-align: center;
+    width: 100vw;
+    background-size: cover;
+  }
+  .about-us-section h1{
+    display: inline;
+    font-size:28px;
+    text-align:left;
+    font-weight:850;
+    font-family: "roboto";
+    color: #183b56;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 3px solid darkgrey;
+  }
+  .about-us div{
+    width: 50%;
+    text-align: start;
+    padding: 3%;
+  }
+
+  .about-us-para{
+    font: 400 18px "Roboto Condensed", sans-serif;
+  }
+.about-us-img{
+    width: 100%;
+}
