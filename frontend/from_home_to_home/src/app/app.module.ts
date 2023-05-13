@@ -8,6 +8,8 @@ import { DishesComponent } from './Components/dishes/dishes.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
+import { LoginFormComponent } from './Components/login-form/login-form.component';
+import { RegisterPageComponent } from './Components/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './Components/home/home.component';
     DishesComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    LoginFormComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
