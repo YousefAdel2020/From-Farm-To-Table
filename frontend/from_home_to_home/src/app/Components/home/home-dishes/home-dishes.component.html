@@ -1,4 +1,14 @@
 
-<div class="d-flex">
-    <app-card></app-card>
+<div class="container">
+    <div style="margin: 5%; text-align: center;" class="section-heading">
+        <h1>Top Rated Dishes</h1>
+        <div></div>
+      </div>
+      <div class="cards-container">
+        <div *ngFor="let s of topDishes">
+            <app-card></app-card>
+         </div>
+      </div>
+
+    
 </div>

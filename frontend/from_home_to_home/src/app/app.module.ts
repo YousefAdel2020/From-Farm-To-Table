@@ -5,14 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
-import { ProfileChiefComponent } from './components/profile-chief/profile-chief.component';
-
 import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { RatingStarComponent } from './Components/rating-star/rating-star.component';
-import { UpdateChiefComponent } from './components/update-chief/update-chief.component';
 
 
 import { CardComponent } from './Components/card/card.component';
@@ -35,10 +32,7 @@ let routes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-
-    ProfileChiefComponent,
     RatingStarComponent,
-    UpdateChiefComponent,
 
    
 

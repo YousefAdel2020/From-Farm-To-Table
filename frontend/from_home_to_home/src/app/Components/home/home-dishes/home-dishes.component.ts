@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-dishes.component.css']
 })
 export class HomeDishesComponent {
- NumOfDishes = 3;
+ topDishes = ['dish1' , 'dish2', "dish3"]
+
+
 }
