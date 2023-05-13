@@ -42,7 +42,7 @@ section{
     color:black;
     margin: 7px 0 25px;
   }
-  .ban_text a {
+    .ban_text a{
     display: inline-block;
     font: 800 19.39px/24px "Roboto Condensed", sans-serif;
     background: #d0b200;
@@ -223,9 +223,62 @@ section{
     padding: 3%;
   }
 
-  .about-us-para{
-    font: 400 18px "Roboto Condensed", sans-serif;
+  .about-us-para {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-weight : 400;
   }
 .about-us-img{
     width: 100%;
+}
+
+/* delivery and payments section */
+.payment-methods-section{
+  margin-bottom:60px;
+    margin-top:60px;
+    text-align: center;
+    width: 100vw;
+}
+.payment-methods-section h1{
+  display: inline;
+  font-size:28px;
+  text-align:left;
+  font-weight:850;
+  font-family: "roboto";
+  color: #183b56;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-bottom: 3px solid darkgrey;
+}
+
+.payment-para-section{
+  align-items: center !important;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.payment-para{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight : 400;
+}
+.delivery-payment-images{
+  height: 58px;
+  width: 58px;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.payment-section-btn{
+  display: inline-block;
+  font: 800 19.39px/24px "Roboto Condensed", sans-serif;
+  background: #d0b200;
+  border-radius: 26px;
+  color: white;
+  padding: 12px 28px;
+  margin-bottom: 2%;
+
 }
