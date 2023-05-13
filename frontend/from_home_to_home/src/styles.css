@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 *{
     /*margin: 0;
     border: 0;
     box-sizing: border-box; */
     overflow-x: hidden;
 }
+=======
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.fill{
+    color: orange !important;
+    }
+
+>>>>>>> b87a54406252354c4e3d9ea8a8dee153b6cda04f
