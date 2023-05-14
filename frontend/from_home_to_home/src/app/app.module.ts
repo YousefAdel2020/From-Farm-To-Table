@@ -4,6 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ProfileUserComponent } from './components/profile-user/profile-user.component';
+
+import { FormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+
 
 import { FormsModule } from '@angular/forms';
 
@@ -32,6 +40,10 @@ let routes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+
+    ProfileUserComponent,
+    UpdateUserComponent
+
     RatingStarComponent,
 
    
@@ -44,11 +56,14 @@ let routes:Routes = [
     LoginFormComponent,
     RegisterPageComponent,
     HomeDishesComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     RouterModule.forRoot(routes),
+
     // NgxStarRatingModule,
     FormsModule,
 
