@@ -1,0 +1,4 @@
+<div class="rating">
+    <mat-icon *ngFor="let star of stars" [ngClass]="{'active': star <= rating}" (click)="setRating(star)">star</mat-icon>
+  </div>
+  
