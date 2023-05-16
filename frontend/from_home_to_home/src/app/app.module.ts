@@ -70,7 +70,7 @@ let routes:Routes = [
 
     // NgxStarRatingModule,
     FormsModule,
-
+ // NgxStarRatingModule,
     BrowserAnimationsModule,
     MatIconModule,
   
