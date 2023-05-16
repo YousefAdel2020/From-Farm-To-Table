@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { UpdateChiefComponent } from './Components/update-chief/update-chief.component';
 import { ProfileChiefComponent } from './Components/profile-chief/profile-chief.component';
 import { DishesComponent } from './Components/dishes/dishes.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'dishes', component:DishesComponent},
   {path:'updateUser', component:UpdateUserComponent},
   {path:'viewUser', component:ProfileUserComponent},
+
 
 ];
 
