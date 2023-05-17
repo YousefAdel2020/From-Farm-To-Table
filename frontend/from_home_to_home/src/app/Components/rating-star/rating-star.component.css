@@ -1,7 +1,8 @@
 .rating {
     color: rgba(229, 255, 101, 0.586);
     font-size: 40px;
-    margin-left: 90px;
+    margin-left: 70px;
+    margin-top: 40px;
   }
   
   .active {
