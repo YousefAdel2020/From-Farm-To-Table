@@ -1,0 +1,46 @@
+.box {
+  
+    /* border: 3px solid rgb(28, 18, 18); */
+    box-shadow: 10px 10px 10px rgb(212, 185, 185);
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    gap: 20px;
+}
+
+hr {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* .details{
+    border: 1px solid black;
+} */
+.grid img {
+
+    width: 95%;
+border-radius: 60px;
+    padding: 5px;
+}
+
+.grid button {
+    width: 160px;
+    height: 40px;
+margin-top: 10px;
+    background-color: black;
+
+    margin-left: 70px;
+}
+
+
+
+p {
+    margin-left: 90px;
+    padding: 15px;
+
+    font-size: 20px;
+}

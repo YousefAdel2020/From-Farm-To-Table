@@ -1,0 +1,72 @@
+
+<div class="pt-5" style="text-align: center;">
+    <div class="container" style="width: 500px; margin: 0 auto;">
+         <div class="main-body justify-content-center align-items-center">
+             <div class="row ">
+               
+                  <div class="text mt-3"> 
+                     <h2 class="name mt-3"><strong>Update User Info:</strong> </h2>
+                  </div> 
+                 <div class="col-lg-12 align-items-center justify-content-center">
+                     <div class="card">
+                         <div class="card-body m-2 p-3">
+                             <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label class="fs-6 pt-2" for="username">User
+                                        Name</label>
+								</div>
+                                <div class="col-sm-10 text-secondary">
+                                    <input class="form-control" type="text" id="username" placeholder="Enter your name" [(ngModel)]="userName" name="username" />
+								</div>
+                            </div>
+                             <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label class="fs-6 pt-2"  for="email">Email</label>
+                                </div>
+                                <div class="col-sm-10 text-secondary">
+                                  <input class="form-control" type="email" id="email" [(ngModel)]="email" placeholder="Enter your email" name="email" />
+                                </div>
+                             </div>
+                             <div class="row mb-3">
+                                <div class="col-sm-2">
+                                   <label class="fs-6 pt-2" for="phone">Phone</label>
+                                </div>
+                                <div class="col-sm-10 text-secondary">
+                                  <input  class="form-control"type="tel" id="phone" [(ngModel)]="phoneNumber"  placeholder="Enter your phone" name="phone" />
+                                </div>
+                             </div>
+                             
+                             <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label class="fs-6 pt-2" for="address">Address:</label>
+                                </div>
+                                <div class="col-sm-10 text-secondary">
+
+                                    <input class="form-control" type="text" id="address" [(ngModel)]="address" placeholder="Enter your address"    name="address" />
+                                </div>
+                             </div>
+                             <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label class="fs-6 pt-2" for="image">Image</label>
+                                </div>
+                                <div class="col-sm-10 text-secondary">
+                                  <input  class="form-control" type="file" id="image"  [(ngModel)]="image" name="image" />
+                                </div>
+                             </div>
+                             
+                             <div class="row">
+                                 <div class="col-sm-4"></div>
+                                <div class="col-sm-8 text-secondary d-flex mt-2">
+                                   <button type="submit" class="btn px-4 grid btn1 btn-dark"><a class="text-decoration-none" style="color: white;"> Editting </a></button> 
+                               </div> 
+                             </div>
+                         </div>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 
+ 
