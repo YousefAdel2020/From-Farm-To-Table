@@ -1,2 +1,18 @@
-<p>dishes works!</p>
-<app-card title="Pizza" content="Some card content"></app-card>
+<form>
+    <label>
+      Name:
+      <input type="text" [(ngModel)]="nameFilter">
+    </label>
+</form>
+<div class="card-container">
+    <div  class="card-item"   *ngFor="let product of products"   [ngClass]="{ 'hidden': (nameFilter && !product.name.toLowerCase().includes(nameFilter.toLowerCase())) }">
+        <app-card 
+                  [title]="product.name"
+                  [content]="product.content"
+                  [ImageUrl]="'../../../assets/dishes/pasta.jpg'"
+                  *ngIf="(!nameFilter || product.name.toLowerCase().includes(nameFilter.toLowerCase()))">
+        </app-card>
+    
+      </div>
+</div>
+

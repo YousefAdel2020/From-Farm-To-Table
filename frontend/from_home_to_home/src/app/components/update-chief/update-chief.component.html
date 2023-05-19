@@ -1,30 +1,32 @@
-<div class="box">
-    <form>
-        <h1 class="text-center pb-5 fst-italic ">Update Chief</h1>
+<div class="box" style="margin-top: 20px; margin-bottom: 20px;">
+    
+        <h1 class="text-center pb-2 fst-italic shape "> Chief</h1>
       
+    <form>
+       
         <div class="form-group  m-2 ">
-            <label class="col-3 fs-4 fst-italic" for="username">User Name</label>
+            <label class="col-3 fs-6 fst-italic" for="username">User Name</label>
             <input  type="text" id="username" placeholder="Enter your name" [(ngModel)]="userName" name="username" />
         </div>
         <div class="form-group  m-2">
 
-            <label class="col-3 fs-4 fst-italic" for="email">Email</label>
+            <label class="col-3 fs-6 fst-italic" for="email">Email</label>
             <input  type="email" id="email" [(ngModel)]="email" placeholder="Enter your email" name="email" />
         </div>
         <div class="form-group m-2">
-            <label class="col-3 fs-4 fst-italic" for="phone">Phone</label>
+            <label class="col-3 fs-6 fst-italic" for="phone">Phone</label>
             <input  type="tel" id="phone" [(ngModel)]="phoneNumber"  placeholder="Enter your phone" name="phone" />
         </div>
         <div class="form-group  m-2">
-            <label class="col-3 fs-4 fst-italic" for="address">Address:</label>
+            <label class="col-3 fs-6 fst-italic" for="address">Address:</label>
             <input  type="text" id="address" [(ngModel)]="address" placeholder="Enter your address"    name="address" />
         </div>
         <div class=" form-group  m-2">
-            <label class="col-3  fs-4 fst-italic" for="image">Image</label>
+            <label class="col-3  fs-6 fst-italic" for="image">Image</label>
             <input type="file" id="image"  [(ngModel)]="image" name="image" />
         </div>
         <div class="form-group  ">
-            <label class="col-3  fs-4 fst-italic "  for="about me">About me</label>
+            <label class="col-3  fs-6 fst-italic "  for="about me">About me</label>
             <textarea id="about me" placeholder="Enter about your self" [(ngModel)]="aboutMe" name="about me" ></textarea>
         </div>
         <div class="form-group d-flex m-2 m-auto justify-content-center " >
