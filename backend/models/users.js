@@ -78,7 +78,7 @@ userSchema.pre("save", async function () {
 //* instance method for creating JWT token
 userSchema.methods.createJWT = function () {
   return jwt.sign(
-    { userId: this._id, firstName: this.firstName },
+    { userId: this._id, firstName: this.firstName ,role:this.role},
     JWT_secret,
     { expiresIn: JWT_expiration }
   );
