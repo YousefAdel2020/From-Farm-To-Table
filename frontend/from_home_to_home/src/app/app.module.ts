@@ -39,6 +39,9 @@ import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.
 
 
 
+import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
+
+
 
 
 let routes:Routes = [
@@ -64,10 +67,15 @@ let routes:Routes = [
     LoginFormComponent,
     RegisterPageComponent,
     HomeDishesComponent,
+
     UpdateChiefComponent,
     CreateDishesComponent,
     UpdateDishesComponent
    
+
+    DetailsDishComponent
+
+
   ],
   
 

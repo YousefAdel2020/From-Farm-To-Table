@@ -8,14 +8,25 @@ import { ProfileUserComponent } from './Components/profile-user/profile-user.com
 import { CreateDishesComponent } from './Components/create-dishes/create-dishes.component';
 import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.component';
 
+import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
+
+
 const routes: Routes = [
   {path:'updateChief', component:UpdateChiefComponent},
   {path:'viewChief', component:ProfileChiefComponent},
   {path:'dishes', component:DishesComponent},
   {path:'updateUser', component:UpdateUserComponent},
   {path:'viewUser', component:ProfileUserComponent},
+
 {path:'createDishes', component:CreateDishesComponent},
 {path:'updateDishes', component:UpdateDishesComponent}
+
+
+
+  {path:'viewDetails', component:DetailsDishComponent},
+
+
+
 ];
 
 @NgModule({
