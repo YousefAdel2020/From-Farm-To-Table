@@ -31,6 +31,8 @@ import { HomeComponent } from './Components/home/home.component';
 
 
 import { HomeDishesComponent } from './Components/home/home-dishes/home-dishes.component';
+import { CreateDishesComponent } from './Components/create-dishes/create-dishes.component';
+
 
 
 
@@ -59,6 +61,7 @@ let routes:Routes = [
     RegisterPageComponent,
     HomeDishesComponent,
     UpdateChiefComponent,
+    CreateDishesComponent,
    
   ],
   
