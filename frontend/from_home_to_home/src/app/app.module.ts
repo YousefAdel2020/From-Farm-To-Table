@@ -34,6 +34,7 @@ import { HomeDishesComponent } from './Components/home/home-dishes/home-dishes.c
 
 
 
+
 let routes:Routes = [
   {path:"", component:HomeComponent},
   {path:"home", component:HomeComponent},
@@ -57,7 +58,8 @@ let routes:Routes = [
     LoginFormComponent,
     RegisterPageComponent,
     HomeDishesComponent,
-    UpdateChiefComponent
+    UpdateChiefComponent,
+   
   ],
   
 
