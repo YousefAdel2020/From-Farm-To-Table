@@ -32,6 +32,9 @@ import { HomeComponent } from './Components/home/home.component';
 
 import { HomeDishesComponent } from './Components/home/home-dishes/home-dishes.component';
 
+import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
+
+
 
 
 let routes:Routes = [
@@ -57,7 +60,10 @@ let routes:Routes = [
     LoginFormComponent,
     RegisterPageComponent,
     HomeDishesComponent,
-    UpdateChiefComponent
+
+    UpdateChiefComponent,
+    DetailsDishComponent
+
   ],
   
 
