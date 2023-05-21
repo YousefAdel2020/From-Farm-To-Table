@@ -15,6 +15,7 @@ const connectDB=require('./db/connect');
 const authRouter=require("./routes/auth");
 
 
+const authenticateUser=require("./middleware/authenticationMiddleware");
 
 // error handler
 const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
@@ -29,6 +30,9 @@ app.use(express.urlencoded({extended:true}));
 
 //& Routes
 app.use("/api/v1/auth",authRouter);
+app.get('/',authenticateUser,(req,res)=>{
+  res.json(req.user)
+})
   
 
 app.use(NotFoundMiddleware)
