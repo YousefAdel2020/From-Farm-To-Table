@@ -1,0 +1,35 @@
+<div class="box" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="grid">
+        <img src="../../../assets/WhatsApp Image 2023-05-11 at 19.09.42.jpg" class="h-25 ">
+
+
+
+        <app-rating-star [rating]="2"></app-rating-star>
+
+
+        <button type="button" class="btn btn-dark">
+            <a class="text-decoration-none" style="color: white;" routerLink="/updateChief">Edit Profile </a>
+        </button>
+    </div>
+    <div class="details">
+        <h3 class="fst-italic text-center fs-4">About me </h3>
+        <div style="font-size: 15px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 
+        </div>
+        <hr>
+        <h2> UserName:</h2>
+        <p>{{userName}}</p>
+
+        <hr>
+        <h2> EMail:</h2>
+        <p> {{email}}</p>
+        <hr>
+        <h2>Phone Numnber: </h2>
+        <p>{{phoneNumber}}</p>
+        <hr>
+        <h2> Address : </h2>
+        <p>{{Address}}</p>
+    </div>
+</div>
