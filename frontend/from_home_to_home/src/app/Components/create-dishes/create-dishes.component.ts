@@ -10,5 +10,6 @@ export class CreateDishesComponent {
   image: string | undefined;
   description: string | undefined;
   price: number | undefined;
- 
+   categories = ['Dessert', 'Savory'];
+   selectedCategory: string = 'Dessert';
 }
