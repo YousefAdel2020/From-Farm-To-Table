@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-dishes.component.css']
 })
 export class CreateDishesComponent {
+  name: string | undefined;
   image: string | undefined;
   description: string | undefined;
+  price: number | undefined;
  
 }

@@ -170,7 +170,7 @@ button:hover .icon-3 {
 /* details about me */
 
 .details{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-shadow: 10px 10px 10px rgb(212, 185, 185);
     margin: auto;
     margin-top: 10px;
