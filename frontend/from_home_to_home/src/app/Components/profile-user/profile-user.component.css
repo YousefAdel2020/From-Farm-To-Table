@@ -1,3 +1,4 @@
+
 * {
     overflow: revert;
     margin: 0;
@@ -147,6 +148,7 @@
   }
 /* ///////// */
 /* 
+
 body{
     margin-top:20px;
     color: #1a202c;
@@ -243,4 +245,6 @@ body{
     transition: all 0.5s;
     background-color: transparent;
 }
+
  */
+

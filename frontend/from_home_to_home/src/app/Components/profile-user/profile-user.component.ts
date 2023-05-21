@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-user.component.css']
 })
 export class ProfileUserComponent {
+
   userFirstName = 'John ';
   userLastName = ' Doe';
   gender = 'male';
+
   email = 'john@example.com';
   phoneNumber = '(239) 816-9029';
   Address = 'Bay Area, San Francisco, CA';

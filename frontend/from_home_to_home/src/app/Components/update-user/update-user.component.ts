@@ -10,9 +10,11 @@ export class UpdateUserComponent {
 
   image: string | undefined;
   aboutMe: string | undefined;
+
   userFirstName: string | undefined;
   userLastName: string | undefined;
   gender: string | undefined;
+
 
   email: string | undefined;
   phoneNumber: string | undefined;

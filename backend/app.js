@@ -1,5 +1,8 @@
 const express=require("express");
 const app=express();
+require("express-async-errors"); 
+
+
 
 const config=require("./config/config");
 
@@ -8,21 +11,32 @@ const config=require("./config/config");
 const connectDB=require('./db/connect');
 
 
+// routers
+const authRouter=require("./routes/auth");
+
+
+const authenticateUser=require("./middleware/authenticationMiddleware");
+
+// error handler
+const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
+const NotFoundMiddleware = require("./middleware/notFoundMiddleware");
+
+
 // for body-parser
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
 
+//& Routes
+app.use("/api/v1/auth",authRouter);
+app.get('/',authenticateUser,(req,res)=>{
+  res.json(req.user)
+})
+  
 
-app.get('/',(req,res)=>{
-  throw new Error("my error")
-  console.log("------------------------------")
-
-  res.send('hello world');
-
-  })
-
+app.use(NotFoundMiddleware)
+app.use(errorHandlerMiddleware)
 
 
 const port = config.PORT || 3000;
