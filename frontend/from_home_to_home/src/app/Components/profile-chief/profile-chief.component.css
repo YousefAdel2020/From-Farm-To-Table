@@ -1,7 +1,7 @@
 /* all */
 .box {
  box-shadow: 10px 10px 10px rgb(212, 185, 185);
-  width: 800px;
+ max-width: 800px;
   margin: auto;
 }
 
@@ -9,15 +9,19 @@
 /* img and rating and button */
 
 .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(233, 163, 239);
+  height: 100%;
 }
 
 .grid img {
+
   margin-top: 20px;
-  margin-left: 290px;
   width: 200px;
   height: 200px;
-
   border-radius: 120px;
   padding: 7px;
   background-color: rgb(255, 255, 255);
@@ -34,7 +38,6 @@
   border-radius: 8px;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .2));
   margin-top: 20px;
-  margin-left: 300px;
   margin-bottom: 10px;
 }
 
@@ -148,73 +151,98 @@ button:hover .icon-3 {
   }
 }
 
-
+@media only screen and (max-width: 600px) {
+  .grid img {
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 90px;
+  padding: 5px;
+  }
+  
+  .grid button {
+  font-size: 14px;
+  padding: 10px 30px;
+  }
+  }
 
 /* -------------------------------details-------------------------- */
 /* details about me */
+
+.details{
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px rgb(212, 185, 185);
+    margin: auto;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
 .about {
  
   font-size: medium;
   padding: 10px;
   margin-right: 6px;
+  text-align: justify;
 }
 
 hr {
   width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: auto;
+  margin-right: auto;
 
   border: 2px solid rgb(82, 13, 85);
 }
 
-.details{
-    border: 1px solid black;
-}
 p {
   margin-left: 90px;
   padding: 6px;
 
-  font-size: 20px;
+  font-size: 1.2rem;
 }
+
+.cdish{
+  display: block;
+  margin: auto;
+  width: 170px;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(135, 81, 186);
+  color: #fff;
+  font-size: 1.2rem;
+  }
 /* ------------------dishes----------------------------*/
 .dish {
   box-shadow: 10px 10px 10px rgb(212, 185, 185);
   margin: auto;
   margin-top: 10px;
-  border: 2px solid black;
-  width: 800px;
+  /* border: 2px solid black; */
+  max-width: 800px;
   margin-bottom: 20px;
 }
 
 .dish img {
+  max-width: 100%;
+  height: auto;
   margin-left: 3px;
   margin-top: 20px;
   padding: 10px;
 }
-@media  (max-width: 768px) {
-  .dish {
-    box-shadow: 10px 10px 10px rgb(212, 185, 185);
-    margin: auto;
-    margin-top: 10px;
-    border: 2px solid black;
-    width: 600px;
-    margin-bottom: 20px;
-  }
-  .dish img {
-   margin: auto;
-    padding: 10px;
-    width: 200px;
-    height: 200px;
-  }
+.btn-group {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
 .btn-group button {
-  margin: 40px;
   width: 80px;
-  text-align: center;
   height: 40px;
   color: #ffffff;
   background-color: rgb(135, 81, 186);
   border-radius: 10px;
+  font-size: 1.2rem;
+
 
 }

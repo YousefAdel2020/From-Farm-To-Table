@@ -1,24 +1,19 @@
 .box{
 
-   
-    /* border: 3px solid rgb(28, 18, 18); */
+
     box-shadow: 10px 10px 10px rgb(212, 185, 185);
    
-    /* box-shadow: 12px 12px 2px 2px rgba(188, 188, 193, 0.2); */
-    width: 900px;
-    height: 800px;
-    margin: auto;  
+ 
+    max-width: 900px;
+    margin:  20px auto;
+    
    
     }
     .shape{
-     margin-left: 350px;
-     padding-top:35px;
-     padding-left:3px;
-        height: 100px;
-        width: 200px;
-        /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
-        /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
-       /* background-color:rgb(214, 188, 238) ; */
+      text-align: center;
+      margin-bottom: 20px;
+     
+
       
     }
   
@@ -33,6 +28,7 @@
         border-bottom: 2px solid rgb(3, 3, 3);
         background-color:rgb(214, 188, 238);
         border-radius: 4px;
+        font-size: 1.2rem;
       }
       textarea{
         width: 60%;
@@ -48,6 +44,8 @@
     
 
 .Btn{
+  display: block;
+  margin: 0 auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,7 +72,7 @@
       
       
        margin-bottom: 20px;
-       margin-left: 400px
+      
 }
 .svg{
   width: 13px;
