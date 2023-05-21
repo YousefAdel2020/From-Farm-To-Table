@@ -31,6 +31,13 @@ import { HomeComponent } from './Components/home/home.component';
 
 
 import { HomeDishesComponent } from './Components/home/home-dishes/home-dishes.component';
+import { CreateDishesComponent } from './Components/create-dishes/create-dishes.component';
+import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.component';
+
+
+
+
+
 
 import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
 
@@ -62,7 +69,12 @@ let routes:Routes = [
     HomeDishesComponent,
 
     UpdateChiefComponent,
+    CreateDishesComponent,
+    UpdateDishesComponent
+   
+
     DetailsDishComponent
+
 
   ],
   
