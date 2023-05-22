@@ -8,6 +8,7 @@ import { Component,Input } from '@angular/core';
 export class CardComponent {
   @Input() title!: string;
   @Input() content!: string;
+  @Input() ImageUrl!: string;
 
   getRatingStars(rating: number): string {
     const maxRating = 5;

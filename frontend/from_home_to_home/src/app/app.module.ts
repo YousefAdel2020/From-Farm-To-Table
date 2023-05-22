@@ -70,7 +70,7 @@ let routes:Routes = [
 
     UpdateChiefComponent,
     CreateDishesComponent,
-    UpdateDishesComponent
+    UpdateDishesComponent,
    
 
     DetailsDishComponent
