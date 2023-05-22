@@ -13,7 +13,7 @@ const connectDB=require('./db/connect');
 
 // routers
 const authRouter=require("./routes/auth");
-
+const dishRouter=require("./routes/dishs");
 
 
 // error handler
@@ -29,7 +29,7 @@ app.use(express.urlencoded({extended:true}));
 
 //& Routes
 app.use("/api/v1/auth",authRouter);
-  
+app.use("/api/v1/dishes",dishRouter); 
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)
