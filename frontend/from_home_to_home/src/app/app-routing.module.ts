@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'viewUser', component:ProfileUserComponent},
 
 {path:'createDishes', component:CreateDishesComponent},
-{path:'updateDishes', component:UpdateDishesComponent}
+{path:'updateDishes', component:UpdateDishesComponent},
 
 
 
