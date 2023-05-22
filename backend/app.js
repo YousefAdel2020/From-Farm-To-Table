@@ -19,7 +19,7 @@ const connectDB=require('./db/connect');
 
 // routers
 const authRouter=require("./routes/auth");
-
+const dishRouter=require("./routes/dishs");
 
 const authenticateUser=require("./middleware/authenticationMiddleware");
 

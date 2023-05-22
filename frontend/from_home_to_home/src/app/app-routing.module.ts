@@ -21,9 +21,7 @@ const routes: Routes = [
 {path:'createDishes', component:CreateDishesComponent},
 {path:'updateDishes', component:UpdateDishesComponent},
 
-
-
-  {path:'viewDetails', component:DetailsDishComponent},
+{path:'viewDetails', component:DetailsDishComponent},
 
 
 
