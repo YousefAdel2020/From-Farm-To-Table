@@ -20,6 +20,7 @@ const connectDB=require('./db/connect');
 // routers
 const authRouter=require("./routes/auth");
 const dishRouter=require("./routes/dishs");
+const userRouter=require("./routes/user");
 
 const authenticateUser=require("./middleware/authenticationMiddleware");
 
@@ -52,6 +53,8 @@ app.get('/',authenticateUser,(req,res)=>{
   res.json(req.user)
 })
   
+//user routes
+app.use("/api/users",userRouter);
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)
