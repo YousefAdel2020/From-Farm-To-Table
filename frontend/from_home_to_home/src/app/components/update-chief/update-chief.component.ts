@@ -14,6 +14,4 @@ export class UpdateChiefComponent {
   email: string | undefined;
   phoneNumber: string | undefined;
   address: string | undefined;
-
-
 }

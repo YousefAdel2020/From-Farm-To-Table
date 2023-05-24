@@ -3,12 +3,22 @@ const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, UnauthenticatedError } = require("../errors");
 
 
+
+
+
+
 const register = async (req, res) => {
+  
+  if(req.file)
+  {
+    req.body.img=req.file.filename
+  }
+
   const user = await User.create({ ...req.body });
   const token = user.createJWT();
   res
     .status(StatusCodes.CREATED)
-    .json({ user: { firstName: user.firstName }, token });
+    .json({ user, token });
 };
 
 const login = async (req, res) => {
@@ -35,7 +45,7 @@ const login = async (req, res) => {
 
   res
     .status(StatusCodes.OK)
-    .json({ user: { firstName: user.firstName }, token });
+    .json({user, token });
 };
 
 module.exports = {

@@ -20,7 +20,7 @@ const connectDB=require('./db/connect');
 // routers
 const authRouter=require("./routes/auth");
 const dishRouter=require("./routes/dishs");
-const userRouter=require("./routes/user");
+const userRouter=require("./routes/users");
 
 const authenticateUser=require("./middleware/authenticationMiddleware");
 
@@ -39,6 +39,8 @@ app.use(rateLimit({
 // for body-parser
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+// http://127.0.0.1:8000/uploads/<name of image>
+app.use('/uploads', express.static('uploads/images'));
 
 // security middleware
 app.use(helmet());
@@ -49,10 +51,9 @@ app.use(xss());
 
 //& Routes
 app.use("/api/v1/auth",authRouter);
-app.get('/',authenticateUser,(req,res)=>{
-  res.json(req.user)
-})
-  
+app.use("/api/v1/dishes",dishRouter);
+
+//& for admin
 //user routes
 app.use("/api/v1/users",userRouter);
 

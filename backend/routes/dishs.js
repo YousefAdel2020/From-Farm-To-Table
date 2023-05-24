@@ -1,10 +1,17 @@
 const express=require("express");
 const dishRouter=express.Router();
 
+const auth=require("../middleware/authenticationMiddleware");
+const {verifyChef}=require("../middleware/verifyChefMiddleware");
+const {upload}=require("../utils/upload")
 
-const {getAllDishes,createDish, getTopRated} =require("../controllers/dish");
 
-dishRouter.route("/").get(getAllDishes).post(createDish);
+const {getAllDishes,getDish,createDish,updateDish,deleteDish, getTopRated} =require("../controllers/dish");
+
+dishRouter.route("/").get(getAllDishes).post(auth,verifyChef,upload.single("img"),createDish);
+
+dishRouter.route("/:dishId").get(getDish).put(auth,verifyChef,upload.single("img"),updateDish).delete(auth,verifyChef,deleteDish);
+
 dishRouter.get("/topRated", getTopRated);
 
 

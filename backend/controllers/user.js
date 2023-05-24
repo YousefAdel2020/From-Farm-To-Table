@@ -1,24 +1,16 @@
 const User = require("../models/users");
-const multer=require("multer");
-const path = require("path");
 const { StatusCodes } = require("http-status-codes");
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    // Specify the directory where you want to store the images
-    cb(null, 'uploads/images');
-  },
-  filename: function (req, file, cb) {
-    // Generate a unique filename for the uploaded image
-    const uniqueSuffix = Date.now()  + path.extname(file.originalname);
-    cb(null, file.fieldname + '-' + uniqueSuffix);
-  }
-});
-
-const upload = multer({ storage: storage });
+const { StatusCodes } = require("http-status-codes");
+const {
+  BadRequestError,
+  UnauthenticatedError,
+  NotFoundError,
+  ForbidenError,
+} = require("../errors")
 
 
-const remove = async (req, res) => {
+
+const removeUser = async (req, res) => {
     const { id } = req.params;
     try {
       await  User.findByIdAndDelete(id) 
@@ -33,7 +25,7 @@ const remove = async (req, res) => {
 
   };
 
-const edit  = async (req, res) => {
+const updateUser  = async (req, res) => {
 
     const { id } = req.params;
     const user = await User.findById(id);
@@ -77,11 +69,19 @@ const edit  = async (req, res) => {
     }
   }
 
-  module.exports = {
-    edit,
-    remove,
-    upload
-  };
+ 
   
 
-  
+
+const getAllUsers = async (req, res) => {
+  const users = await User.find({}).select('-password');
+
+  res.status(StatusCodes.OK).json({ users });
+};
+
+
+module.exports = {
+  updateUser,
+  removeUser,
+  getAllUsers
+};
