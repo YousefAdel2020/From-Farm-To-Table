@@ -17,9 +17,6 @@ const getAllDishes = async (req, res) => {
 };
 
 const createDish = async (req, res) => {
-  if (req.User.role != "chef") {
-    throw new ForbidenError("You can create dish");
-  }
   if (req.file) {
     req.body.img = req.file.filename;
   }
