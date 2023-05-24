@@ -54,7 +54,10 @@ app.get('/',authenticateUser,(req,res)=>{
 })
   
 //user routes
-app.use("/api/users",userRouter);
+app.use("/api/v1/users",userRouter);
+
+//dishes
+app.use("/api/v1/dishes", dishRouter);
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)

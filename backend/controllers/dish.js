@@ -14,8 +14,25 @@ const getAllDishes = async (req, res) => {
   
     res.status(StatusCodes.CREATED).json({ dish });
   };
+
+const getTopRated = async(req,res)=> {
+  try {
+    const dishes = await Dish.find({
+      rating: {
+        $gt: 3
+      }
+    }).sort({
+      rating: -1
+    }).limit(3);
+   res.status(StatusCodes.OK).json(dishes);
+  }catch(err){
+    res.status(404).json({"message" : "Couldn't find dishes"})
+  }
+
+}
   
   module.exports = {
     getAllDishes,
-    createDish
+    createDish,
+    getTopRated
   };
