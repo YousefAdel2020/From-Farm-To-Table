@@ -41,11 +41,38 @@ const getDish = async (req, res) => {
 };
 
 const updateDish = async (req, res) => {
-  res.status(StatusCodes.OK).json("update dish");
+
+  const dishId = req.params.dishId;
+  const userId = req.user.userId;
+
+
+  const dish = await Dish.findOneAndUpdate(
+    { _id: dishId, chef: userId },
+    req.body,
+    { new: true, runValidators: true }
+  );
+
+  if (!dish) {
+    throw new NotFoundError(`No dish with Id ${dishId}`);
+  }
+
+  res.status(StatusCodes.OK).json({ dish });
 };
 
 const deleteDish = async (req, res) => {
-  res.status(StatusCodes.OK).json("delete dish");
+
+  const {dishId}=req.params
+  
+  const dish = await Dish.findOneAndDelete({
+    _id: dishId,
+    chef: req.user.userId,
+  });
+
+  if (!dish) {
+    throw new NotFoundError(`No dish with Id ${dishId}`);
+  }
+
+  res.status(StatusCodes.OK).send();
 };
 
 module.exports = {
