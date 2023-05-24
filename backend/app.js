@@ -38,6 +38,8 @@ app.use(rateLimit({
 // for body-parser
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+// http://127.0.0.1:8000/uploads/<name of image>
+app.use('/uploads', express.static('uploads/images'));
 
 // security middleware
 app.use(helmet());
