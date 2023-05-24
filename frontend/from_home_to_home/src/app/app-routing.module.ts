@@ -9,7 +9,8 @@ import { CreateDishesComponent } from './Components/create-dishes/create-dishes.
 import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.component';
 
 import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
-
+import {CartComponent} from './Components/cart/cart.component';
+import {CheckoutComponent} from './Components/checkout/checkout.component';
 
 const routes: Routes = [
   {path:'updateChief', component:UpdateChiefComponent},
@@ -22,8 +23,8 @@ const routes: Routes = [
 {path:'updateDishes', component:UpdateDishesComponent},
 
 {path:'viewDetails', component:DetailsDishComponent},
-
-
+{path:'cart', component:CartComponent},
+{path:'checkout', component:CheckoutComponent},
 
 ];
 
