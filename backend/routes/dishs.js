@@ -1,12 +1,14 @@
 const express=require("express");
 const dishRouter=express.Router();
 
+const auth=require("../middleware/authenticationMiddleware");
+
 
 const {getAllDishes,getDish,createDish,updateDish,deleteDish} =require("../controllers/dish");
 
-dishRouter.route("/").get(getAllDishes).post(createDish);
+dishRouter.route("/").get(getAllDishes).post(auth,createDish);
 
-dishRouter.route("/:id").get(getDish).put(updateDish).delete(deleteDish);
+dishRouter.route("/:dishId").get(getDish).put(auth,updateDish).delete(auth,deleteDish);
 
 
 
