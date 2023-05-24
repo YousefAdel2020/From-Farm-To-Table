@@ -22,7 +22,12 @@ const upload = multer({ storage: storage });
 
 
 const register = async (req, res) => {
-  req.body.img=req.file.filename
+  
+  if(req.file)
+  {
+    req.body.img=req.file.filename
+  }
+
   const user = await User.create({ ...req.body });
   const token = user.createJWT();
   res

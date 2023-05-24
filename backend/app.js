@@ -50,9 +50,7 @@ app.use(xss());
 
 //& Routes
 app.use("/api/v1/auth",authRouter);
-app.get('/',authenticateUser,(req,res)=>{
-  res.json(req.user)
-})
+app.use("/api/v1/dishes",dishRouter)
   
 
 app.use(NotFoundMiddleware)
