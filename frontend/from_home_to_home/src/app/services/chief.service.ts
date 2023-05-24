@@ -11,16 +11,16 @@ export class ChiefService {
 
   private readonly Base_URL = "http://localhost:3000";
   getChiefs(): Observable<any> {
-    const url = `${this.Base_URL}/api/chief/chiefs`;
+    const url = `${this.Base_URL}/api/v1/chief/chiefs`;
     return this.myClient.get(this.Base_URL);
   }
 
   getChiefbyID(id: string): Observable<any> {
-    const url = `${this.Base_URL}/api/chief/:id`;
+    const url = `${this.Base_URL}/api/v1/chief/:id`;
     return this.myClient.get(url);
   }
-  updateChief(chief:any){
-    const url = `${this.Base_URL}/api/chief/update/:id`;
+  updateChief(chief:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/chief/update/:id`;
     return this.myClient.put(url,chief);
   }
 

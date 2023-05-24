@@ -11,24 +11,24 @@ export class DishService {
 
   private readonly Base_URL = "http://localhost:3000";
   getDishs(): Observable<any> {
-    const url = `${this.Base_URL}/api/dish/dishs`;
+    const url = `${this.Base_URL}/api/v1/dish/dishs`;
     return this.myClient.get(this.Base_URL);
   }
 
   getDishbyID(id: any): Observable<any> {
-    const url = `${this.Base_URL}/api/dish/:id`;
+    const url = `${this.Base_URL}/api/v1/dish/:id`;
     return this.myClient.get(url,id);
   }
-  updateDish(dish:any){
-    const url = `${this.Base_URL}/api/dish/update/:id`;
+  updateDish(dish:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/dish/update/:id`;
     return this.myClient.put(url,dish);
   }
-  AddNewdish(newdish:any){
-    const url = `${this.Base_URL}/api/dish/create`;
+  AddNewdish(newdish:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/dish/create`;
     return this.myClient.post(url, newdish);
   }
-  deleteDish(id:any){
-    const url = `${this.Base_URL}/api/dish/delete/:id`;
+  deleteDish(id:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/dish/delete/:id`;
     return this.myClient.delete(url,id);
   }
 

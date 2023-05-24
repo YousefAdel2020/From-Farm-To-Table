@@ -42,7 +42,8 @@ export class UpdateChiefComponent {
 
   image: string | undefined;
   aboutMe: string | undefined;
-  userName: string | undefined;
+  lname: string | undefined;
+  fname: string | undefined;
   email: string | undefined;
   phoneNumber: string | undefined;
   address: string | undefined;
