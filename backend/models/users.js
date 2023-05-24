@@ -37,6 +37,7 @@ const userSchema = mongoose.Schema({
   },
   img: {
     type: String,
+    default: 'unknown.jpg'
   },
   gender: {
     type: String,
