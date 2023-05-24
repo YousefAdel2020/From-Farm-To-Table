@@ -1,11 +1,11 @@
 const {ForbidenError}=require("../errors");
 
-const verifyCheif=async(req,res,next)=>{
-    if (req.user.role != "cheif") {
+const verifyChef=async(req,res,next)=>{
+    if (req.user.role != "chef") {
         throw new ForbidenError('You are not authorized to perform this operation!');
     }
     next();
 }
 
 
-module.exports={verifyCheif}
+module.exports={verifyChef}
