@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -23,10 +23,19 @@ export class DishService {
     const url = `${this.Base_URL}/api/v1/dish/update/:id`;
     return this.myClient.put(url,dish);
   }
-  AddNewdish(newdish:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/dish/create`;
-    return this.myClient.post(url, newdish);
-  }
+  // AddNewdish(newdish:any, token:any):Observable<any>{
+  //   const url = `${this.Base_URL}/api/v1/dishes`;
+  //   var header = {
+  //     headers: new HttpHeaders()
+  //     .set('Authorization',  `Bearer ${token}`)
+  //   }
+  //   return this.myClient.post(url,header ,newdish);
+  // }
+  AddNewdish(newdish: any, token: any): Observable<any> {
+    const url = `${this.Base_URL}/api/v1/dishes`;
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.myClient.post(url, newdish, { headers });
+}
   deleteDish(id:any):Observable<any>{
     const url = `${this.Base_URL}/api/v1/dish/delete/:id`;
     return this.myClient.delete(url,id);
