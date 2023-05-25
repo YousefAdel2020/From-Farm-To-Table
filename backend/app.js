@@ -21,6 +21,7 @@ const connectDB=require('./db/connect');
 const authRouter=require("./routes/auth");
 const dishRouter=require("./routes/dishs");
 const userRouter=require("./routes/users");
+const cartRouter=require("./routes/cart")
 
 const authenticateUser=require("./middleware/authenticationMiddleware");
 
@@ -52,6 +53,8 @@ app.use(xss());
 //& Routes
 app.use("/api/v1/auth",authRouter);
 app.use("/api/v1/dishes",dishRouter);
+
+app.use("/api/v1/cart",cartRouter);
 
 //& for admin
 //user routes

@@ -64,6 +64,10 @@ const userSchema = mongoose.Schema({
     minlength: 0,
     maxlength: 5,
   },
+  cart:{
+    type:Array,
+    default: []
+  }
 });
 
 
