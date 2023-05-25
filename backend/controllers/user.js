@@ -1,6 +1,5 @@
 const User = require("../models/users");
 const { StatusCodes } = require("http-status-codes");
-const { StatusCodes } = require("http-status-codes");
 const {
   BadRequestError,
   UnauthenticatedError,

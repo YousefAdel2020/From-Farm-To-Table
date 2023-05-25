@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.services';
 @Component({
   selector: 'app-register-page',
@@ -9,18 +10,18 @@ import { AuthService } from 'src/app/services/auth.services';
 export class RegisterPageComponent {
 
   registerForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(""),
-    address: new FormControl(''),
+    firstName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    lastName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    address: new FormControl(null, [Validators.required, Validators.minLength(10)]),
     phone: new FormControl(''),
     gender: new FormControl(''),
     role: new FormControl(''),
     image: new FormControl('')
   });
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {}
 
   
 
@@ -52,6 +53,12 @@ export class RegisterPageComponent {
       .register(data)
       .subscribe((response) => {
         console.log(response)
+        if(response.token){
+         window.location.href='/'
+        }
+        
       });
    }
+
+   
 }
