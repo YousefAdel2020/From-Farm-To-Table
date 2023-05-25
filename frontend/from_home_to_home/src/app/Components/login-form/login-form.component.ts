@@ -8,17 +8,24 @@ import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
+
   loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(""),
+    email: new FormControl(null,[Validators.required, Validators.email]),
+    password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
   });
 
   constructor(private authService: AuthService) {}
 
-  submit() {
+  validate(){
+  if(this.loginForm.valid){
     let email = this.loginForm.controls["email"].value || '';
     let password= this.loginForm.controls["password"].value || '';
-    console.log(email, password)
+
+    this.login(email, password)
+  }
+  }
+
+  login(email:any, password:any) {
        
     this.authService
       .login(email, password)
@@ -28,5 +35,20 @@ export class LoginFormComponent {
          }  
       });
   }
+
+  get password () {
+    return this.loginForm.controls["password"].valid;
+  }
+
+ get email(){
+  return this.loginForm.controls["email"].valid;
+ }
+ isEmailDirty(){
+  return this.loginForm.controls["email"].dirty;
+}
+
+isPasswordDirty(){
+  return this.loginForm.controls["password"].dirty;
+}
 
 }
