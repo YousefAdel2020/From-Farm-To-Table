@@ -12,6 +12,7 @@ export class NavbarComponent{
   logout(){
     localStorage.removeItem('user')
     localStorage.removeItem('token')
+    window.location.reload();
   }
 
   //  ngOnInit(): void {

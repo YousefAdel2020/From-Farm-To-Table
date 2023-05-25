@@ -20,7 +20,7 @@ export class AuthService {
       tap((response: any) => {
         this._isLoggedIn$.next(true);
         localStorage.setItem('token', response.token);
-        localStorage.setItem('user', JSON.stringify(response.user));
+        localStorage.setItem('user', JSON.stringify(response.user));  
       })
     );
   }
