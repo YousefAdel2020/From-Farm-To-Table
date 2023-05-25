@@ -11,12 +11,20 @@
       !product.name.toLowerCase().includes(filterdish.toLowerCase()) &&
       !product.category.toLowerCase().includes(filterdish.toLowerCase())
     )) }">
-        <app-card 
+        <!-- <app-card 
                   [title]="product.name"
                   [content]="product.content"
                   [ImageUrl]="'../../../assets/dishes/pasta.jpg'"
                   *ngIf="(!filterdish || product.name.toLowerCase().includes(filterdish.toLowerCase()) || product.category.toLowerCase().includes(filterdish.toLowerCase()))">
-        </app-card>
+        </app-card> -->
+        <app-card 
+                  [product]="product"
+                  [title]="product.name"
+                  [content]="product.content"
+                  [ImageUrl]="'../../../assets/dishes/pasta.jpg'"
+                  *ngIf="(!filterdish || product.name.toLowerCase().includes(filterdish.toLowerCase()) || product.category.toLowerCase().includes(filterdish.toLowerCase()))">
+      </app-card>
+
     
       </div>
 </div>

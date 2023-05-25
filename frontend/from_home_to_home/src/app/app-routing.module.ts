@@ -22,7 +22,7 @@ const routes: Routes = [
 {path:'createDishes', component:CreateDishesComponent},
 {path:'updateDishes', component:UpdateDishesComponent},
 
-{path:'viewDetails', component:DetailsDishComponent},
+{path:'viewDetails/:productId', component:DetailsDishComponent},
 {path:'cart', component:CartComponent},
 {path:'checkout', component:CheckoutComponent},
 

@@ -51,6 +51,7 @@ const createDish = async (req, res) => {
 };
 
 const getDish = async (req, res) => {
+   console.log('here')
   const { dishId } = req.params;
 
   const dish = await Dish.findOne({
