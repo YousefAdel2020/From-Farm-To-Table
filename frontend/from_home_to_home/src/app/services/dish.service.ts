@@ -9,15 +9,15 @@ export class DishService {
 
   constructor( private readonly myClient:HttpClient) {}
 
-  private readonly Base_URL = "http://localhost:3000";
-  getDishs(): Observable<any> {
-    const url = `${this.Base_URL}/api/v1/dish/dishs`;
-    return this.myClient.get(this.Base_URL);
+  private readonly Base_URL = "http://localhost:8000";
+  getDishes(): Observable<any> {
+    const url = `${this.Base_URL}/api/v1/dishes`;
+    return this.myClient.get(url);
   }
 
-  getDishbyID(id: any): Observable<any> {
-    const url = `${this.Base_URL}/api/v1/dish/:id`;
-    return this.myClient.get(url,id);
+  getDishByID(id: any): Observable<any> {
+    const url = `${this.Base_URL}/api/v1/dishes/${id}`;
+    return this.myClient.get(url);
   }
   updateDish(dish:any):Observable<any>{
     const url = `${this.Base_URL}/api/v1/dish/update/:id`;
