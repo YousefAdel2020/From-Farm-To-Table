@@ -16,6 +16,30 @@ const getAllDishes = async (req, res) => {
   res.status(StatusCodes.OK).json({ dishes });
 };
 
+const getTopRated = async(req,res)=> {
+  try {
+    const dishes = await Dish.find({
+      rating: {
+        $gt: 3
+      }
+    }).sort({
+      rating: -1
+    }).limit(3);
+   res.status(StatusCodes.OK).json(dishes);
+  }catch(err){
+    res.status(404).json({"message" : "Couldn't find dishes"})
+  }
+
+}
+ 
+//   const dishes = await Dish.find({}).populate(
+//     "chef",
+//     "firstName lastName email img role gender summary address phoneNumber rating"
+//   );
+
+//   res.status(StatusCodes.OK).json({ dishes });
+// };
+
 const createDish = async (req, res) => {
   if (req.file) {
     req.body.img = req.file.filename;
@@ -81,4 +105,5 @@ module.exports = {
   getDish,
   updateDish,
   deleteDish,
+  getTopRated
 };

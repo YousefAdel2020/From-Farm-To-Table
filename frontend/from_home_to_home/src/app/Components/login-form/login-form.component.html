@@ -3,11 +3,12 @@
 <div class="login">
   <h2>Home To Home</h2>
   <div class="container-form">
-    <form action="#" method="GET">
+    <form action="#" (ngSubmit)="submit()" [formGroup]="loginForm">
       <h3>Welcome Back</h3>
       <p>Sign In with your Email And Password</p>
       <div class="form-group form-fg ">
         <input
+        formControlName="email"
           type="email"
           name="email"
           class="input-text"
@@ -17,6 +18,7 @@
       </div>
       <div class="form-group form-fg ">
         <input
+        formControlName="password"
           type="password"
           name="password"
           class="input-text"

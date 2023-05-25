@@ -54,8 +54,11 @@ app.use("/api/v1/auth",authRouter);
 app.use("/api/v1/dishes",dishRouter);
 
 //& for admin
+//user routes
 app.use("/api/v1/users",userRouter);
-  
+
+//dishes
+app.use("/api/v1/dishes", dishRouter);
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)
