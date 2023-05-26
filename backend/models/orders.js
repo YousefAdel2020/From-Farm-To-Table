@@ -5,10 +5,10 @@ const orderSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     },
-    chef: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
-    },
+    // chef: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: 'User'
+    // },
     dishes: [{
         dish: {
           type: mongoose.Schema.Types.ObjectId,
