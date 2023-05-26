@@ -23,28 +23,6 @@ export class CreateDishesComponent {
 
   constructor(private formBuilder: FormBuilder, private dishService: DishService, private router: Router) {}
 
-  
-   validate(){
-   //if (this.registerForm.valid){
-    // console.log("clicked")
-    // let name= this.registerForm.controls["name"].value;
-    // let description= this.registerForm.controls["description"].value;
-    // let ingredients = this.registerForm.controls["ingredients"].value;
-    // let category= this.registerForm.controls["category"].value;
-    // let img= this.registerForm.controls["img"].value;
-
-    // let data = {
-    //   name,
-    //   description,
-    //   ingredients,
-    //   category,
-    //   img
-    // }
-     
-   // this.register(data)
-   // }
-
-   }
   create(){
     console.log("clicked")
     let user = JSON.parse(localStorage.getItem("user") || '');

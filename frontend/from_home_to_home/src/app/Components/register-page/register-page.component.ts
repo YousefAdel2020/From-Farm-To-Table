@@ -48,13 +48,13 @@ export class RegisterPageComponent {
         role,
         img
       }
-     
+     console.log(data);
     this.register(data)
     }
 
    }
   register(data:any){
-
+    
     this.authService
       .register(data)
       .subscribe((response) => {

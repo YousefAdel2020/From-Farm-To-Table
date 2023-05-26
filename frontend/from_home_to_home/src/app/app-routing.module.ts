@@ -20,8 +20,7 @@ const routes: Routes = [
   {path:'viewUser', component:ProfileUserComponent},
 
 {path:'createDishes', component:CreateDishesComponent},
-{path:'updateDishes', component:UpdateDishesComponent},
-
+{path:'updateDishes/:dishId', component:UpdateDishesComponent},
 {path:'viewDetails/:productId', component:DetailsDishComponent},
 {path:'cart', component:CartComponent},
 {path:'checkout', component:CheckoutComponent},
