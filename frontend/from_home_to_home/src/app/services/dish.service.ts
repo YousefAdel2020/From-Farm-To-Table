@@ -19,9 +19,9 @@ export class DishService {
     const url = `${this.Base_URL}/api/v1/dishes/${id}`;
     return this.myClient.get(url);
   }
-  updateDish(dish:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/dish/update/:id`;
-    return this.myClient.put(url,dish);
+  updateDish(id:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/dishes/update/${id}`;
+    return this.myClient.put(url,id);
   }
   // AddNewdish(newdish:any, token:any):Observable<any>{
   //   const url = `${this.Base_URL}/api/v1/dishes`;
@@ -36,9 +36,10 @@ export class DishService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.myClient.post(url, newdish, { headers });
 }
-  deleteDish(id:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/dish/delete/:id`;
-    return this.myClient.delete(url,id);
-  }
+deleteDish(id: any, token: any): Observable<any> {
+  const url = `${this.Base_URL}/api/v1/dishes/${id}`;
+  const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+  return this.myClient.delete(url, { headers });
+}
 
 }

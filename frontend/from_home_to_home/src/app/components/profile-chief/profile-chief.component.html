@@ -31,7 +31,7 @@
         </div>
         <hr>
         <h2> UserName:</h2>
-        <p>{{userName}}</p>
+        <p>{{Name}}</p>
 
         <hr>
         <h2> EMail:</h2>
@@ -41,33 +41,27 @@
         <p>{{phoneNumber}}</p>
         <hr>
         <h2> Address : </h2>
-        <p>{{Address}}</p>
+        <p>{{address}}</p>
 
      
         <button class="cdish"  routerLink="/createDishes">creat dishes</button>
- </div>
-     
-      <p class="text-center fst-italic fs-4">MY DISHES</p>
-    <div class="card dish" >
-      <div class="row g-0">
-        <div class="col-md-4">
-        
-        <img src="../../../assets/WhatsApp Image 2023-05-11 at 19.09.42.jpg" class="img-fluid rounded-4 "  alt="...">
+        <div class="card dish" *ngFor="let dish of products">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="dish.img" class="img-fluid rounded-4" alt="{{ dish.name }}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ dish.name }}</h5>
+                <p class="card-text">{{ dish.description }}</p>
+                <p class="card-text">Category: {{ dish.category }}</p>
+                <p class="card-text">Ingredients: {{ dish.ingredients.join(", ") }}</p>
+                <p class="card-text">Price: {{ dish.price }} EGP</p>
+                <div class="btn-group">
+                  <button [routerLink]="['/updateDishes/', dish._id]">Update</button>
+                  <button (click)="deleteDish(dish._id)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-          
-            <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-         
-    
-          
-         
-             
-           
-     <div class="btn-group">
-    
-     <button  routerLink="/updateDishes">update</button> <button>delete</button>
-          </div></div>
-        </div>
-      </div>
-    </div>
