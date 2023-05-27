@@ -13,7 +13,7 @@ import {CartComponent} from './Components/cart/cart.component';
 import {CheckoutComponent} from './Components/checkout/checkout.component';
 
 const routes: Routes = [
-  {path:'updateChief', component:UpdateChiefComponent},
+  {path:'updateChief/:id', component:UpdateChiefComponent},
   {path:'viewChief', component:ProfileChiefComponent},
   {path:'dishes', component:DishesComponent},
   {path:'updateUser', component:UpdateUserComponent},

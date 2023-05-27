@@ -5,7 +5,7 @@ import { Token } from '@angular/compiler';
 @Component({
   selector: 'app-profile-chief',
   templateUrl: './profile-chief.component.html',
-  styleUrls: []
+  styleUrls: ['./profile-chief.component.css']
 })
 export class ProfileChiefComponent implements OnInit{
 
