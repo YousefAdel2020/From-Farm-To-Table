@@ -54,8 +54,6 @@ export class ProfileChiefComponent implements OnInit{
     let token = localStorage.getItem('token');
     console.log(id);
     this.dishService.deleteDish(id,token).subscribe(data => {
-      
-      // remove the deleted dish from the products array
       this.products = this.products.filter((dish: any) => dish._id !== id);
     });
   }
