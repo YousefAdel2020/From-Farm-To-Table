@@ -1,14 +1,17 @@
 <div class="main-cart">
     <div class="main-container">
         <h2>Your Cart</h2>
-        <div class="cart-container">
-            <div class="item">
+          <h3 *ngIf="isEmpty; else isEmptyElseBlock ">Cart is Empty</h3>
+          <ng-template #isEmptyElseBlock>
+            <button (click)="clearCart()">Clear Cart</button>
+          </ng-template>
+       <div class="cart-container"  *ngFor="let d of dishes">
+           <div class="item">
                 <img src="https://assets.cookfood.net/product_916_2793.jpg" />
                 
                 <div class="details" data-price="15.50">
-                    <h3>Forno</h3>
-                    <p >Description,is simply dummy text of the printing and typesetting industry.
-                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <h3>{{d.dish.name}}</h3>
+                    <p >{{d.dish.description}}</p>
                 
                 </div>
                 <div class="inner_container">
@@ -18,14 +21,16 @@
                         <button class="plus-btn"><i class="fa fa-plus"></i></button>
                       </div>
                       <div class="price" >
-                        <p>Price: 15$</p>
+                        <p>Price : {{d.dish.price}}$</p>
                       </div>
                 </div>
                 <span class="close-icon"><i class="fa fa-close"></i></span>
 
-            </div>
+                <button (click)="removeFromCart(d.dish._id)">Remove from cart</button>
+
+            </div> 
             
-            <div class="item">
+            <!-- <div class="item">
                 <img src="https://assets.cookfood.net/product_916_2793.jpg" />
                 
                 <div class="details" data-price="15.50">
@@ -46,7 +51,7 @@
                 </div>
                 <span class="close-icon"><i class="fa fa-close"></i></span>
 
-            </div>
+            </div> -->
         </div>
         <div class="total-part">
             <div class="Address-pay">

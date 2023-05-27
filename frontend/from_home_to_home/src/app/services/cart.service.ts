@@ -10,7 +10,7 @@ export class CartService{
   constructor( private readonly myClient:HttpClient) {}
 
   private readonly Base_URL = "http://localhost:8000/api/v1/cart/";
-  private token = '';
+  private token = localStorage.getItem('token');
   addToCart(dishId:any, token:any):Observable<any>{
     this.token = token;
     console.log(dishId);
@@ -23,7 +23,18 @@ export class CartService{
   }
 
   getCart():Observable<any>{
-    return this.myClient.get(this.Base_URL)
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
+    return this.myClient.get(this.Base_URL, {headers})
+  }
+
+  clearCart():Observable<any>{
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
+    return this.myClient.delete(`${this.Base_URL}/clear`, {headers})
+  }
+  removeFromCart(dishId:any):Observable<any>{
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
+   
+    return this.myClient.put( `${this.Base_URL}/${dishId}`,{dishId},{headers})
   }
 
 
