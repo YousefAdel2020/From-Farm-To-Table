@@ -22,7 +22,7 @@ const addToCart = async (req, res) => {
     throw new NotFoundError(`there is no user with this Id : ${userId}`);
   }
   console.log(user.firstName);
-  let dishInfo = { dishId, quantity: 1 };
+  let dishInfo = { dish, quantity: 1 };
   user.cart.push(dishInfo);
   await user.save();
 
@@ -34,7 +34,8 @@ const addToCart = async (req, res) => {
 //[{id1}.quantity,{id2},{id3}]
 
 const updateQuantity = async (req, res) => {
-  const { dishId, quantity } = req.body;
+  const {dishId}=req.params;
+  const {  quantity } = req.body;
   const { userId } = req.user;
   const dish = await Dish.findById(dishId);
   if (!dish) {
@@ -45,7 +46,7 @@ const updateQuantity = async (req, res) => {
     throw new NotFoundError(`there is no user with this Id : ${userId}`);
   }
 
-  const cartItemIndex = user.cart.findIndex((item) => item.dishId === dishId);
+  const cartItemIndex = user.cart.findIndex((item) => item.dish._id == dishId);
   if (cartItemIndex === -1) {
     throw new NotFoundError(`There is no dish with ID ${dishId} in the cart`);
   }
@@ -58,7 +59,7 @@ const updateQuantity = async (req, res) => {
 };
 
 const removeFromCart = async (req, res) => {
-  const { dishId } = req.body;
+  const { dishId } = req.params;
   const { userId } = req.user;
   const dish = await Dish.findById(dishId);
   if (!dish) {
@@ -68,7 +69,7 @@ const removeFromCart = async (req, res) => {
   if (!user) {
     throw new NotFoundError(`there is no user with this Id : ${userId}`);
   }
-  user.cart = user.cart.filter((item) => item.dishId != dishId);
+  user.cart = user.cart.filter((item) => item.dish._id!= dishId);
 
   await user.save();
 

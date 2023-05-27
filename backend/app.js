@@ -29,6 +29,7 @@ const authenticateUser=require("./middleware/authenticationMiddleware");
 // error handler
 const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
 const NotFoundMiddleware = require("./middleware/notFoundMiddleware");
+const auth = require("./middleware/authenticationMiddleware");
 
 app.set('trust proxy', 1)
 app.use(rateLimit({
