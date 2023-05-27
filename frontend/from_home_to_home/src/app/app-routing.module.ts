@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UpdateChiefComponent } from './Components/update-chief/update-chief.component';
+// import { UpdateChiefComponent } from './Components/';
 import { ProfileChiefComponent } from './Components/profile-chief/profile-chief.component';
 import { DishesComponent } from './Components/dishes/dishes.component';
 import { UpdateUserComponent } from './Components/update-user/update-user.component';
@@ -13,7 +13,7 @@ import {CartComponent} from './Components/cart/cart.component';
 import {CheckoutComponent} from './Components/checkout/checkout.component';
 
 const routes: Routes = [
-  {path:'updateChief/:id', component:UpdateChiefComponent},
+  // {path:'updateChief/:id', component:UpdateChiefComponent},
   {path:'viewChief', component:ProfileChiefComponent},
   {path:'dishes', component:DishesComponent},
   {path:'updateUser', component:UpdateUserComponent},
