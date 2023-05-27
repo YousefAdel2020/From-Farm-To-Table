@@ -24,11 +24,15 @@ const userRouter=require("./routes/users");
 const cartRouter=require("./routes/cart");
 const orderRouter=require("./routes/orders");
 
-const authenticateUser=require("./middleware/authenticationMiddleware");
+const {getMyOrders,createCheckoutSession,success} =require("./controllers/order");
+
+
+
 
 // error handler
 const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
 const NotFoundMiddleware = require("./middleware/notFoundMiddleware");
+const auth = require("./middleware/authenticationMiddleware");
 
 app.set('trust proxy', 1)
 app.use(rateLimit({
@@ -59,6 +63,7 @@ app.use("/api/v1/cart",cartRouter);
 
 app.use("/api/v1/orders",orderRouter);
 
+app.get("/success.html",auth,success)
 
 //& for admin
 app.use("/api/v1/users",userRouter);
