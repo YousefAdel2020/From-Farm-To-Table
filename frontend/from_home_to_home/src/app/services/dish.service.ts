@@ -19,18 +19,12 @@ export class DishService {
     const url = `${this.Base_URL}/api/v1/dishes/${id}`;
     return this.myClient.get(url);
   }
-  updateDish(id:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/dishes/update/${id}`;
-    return this.myClient.put(url,id);
+  updateDish(id:any,data:any, token: any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/dishes/${id}`;
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.myClient.put(url,data,{ headers });
   }
-  // AddNewdish(newdish:any, token:any):Observable<any>{
-  //   const url = `${this.Base_URL}/api/v1/dishes`;
-  //   var header = {
-  //     headers: new HttpHeaders()
-  //     .set('Authorization',  `Bearer ${token}`)
-  //   }
-  //   return this.myClient.post(url,header ,newdish);
-  // }
+
   AddNewdish(newdish: any, token: any): Observable<any> {
     const url = `${this.Base_URL}/api/v1/dishes`;
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

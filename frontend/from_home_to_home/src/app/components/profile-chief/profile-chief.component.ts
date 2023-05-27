@@ -18,6 +18,7 @@ export class ProfileChiefComponent implements OnInit{
   address!: string;
   phoneNumber!: string;
   products: any;
+  id!: string;
   
   constructor(private dishService: DishService) {}
  
@@ -33,6 +34,7 @@ export class ProfileChiefComponent implements OnInit{
 
       // assign corresponding values from the user object to variables in the component
       // this.img = userData.img;
+      this.id = userData._id;
       this.cart = userData.cart;
       this.Name = userData.firstName + userData.lastName;
       this.email = userData.email;
