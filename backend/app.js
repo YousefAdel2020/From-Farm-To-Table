@@ -23,7 +23,7 @@ const dishRouter=require("./routes/dishs");
 const userRouter=require("./routes/users");
 const cartRouter=require("./routes/cart");
 const orderRouter=require("./routes/orders");
-
+const singleUserRouter= require("./routes/user");
 const authenticateUser=require("./middleware/authenticationMiddleware");
 
 // error handler
@@ -59,7 +59,7 @@ app.use("/api/v1/cart",cartRouter);
 
 app.use("/api/v1/orders",orderRouter);
 
-
+app.use("api/v1/user",singleUserRouter);
 //& for admin
 //user routes
 app.use("/api/v1/users",userRouter);

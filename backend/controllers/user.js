@@ -25,7 +25,7 @@ const removeUser = async (req, res) => {
   };
 
 const updateUser  = async (req, res) => {
-
+   console.log(req);
     const { id } = req.params;
     const user = await User.findById(id);
 

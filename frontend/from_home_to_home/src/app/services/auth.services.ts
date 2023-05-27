@@ -16,6 +16,7 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
+    console.log("from auth service",email,password);
     return this.apiService.login(email, password).pipe(
       tap((response: any) => {
         this._isLoggedIn$.next(true);

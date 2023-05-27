@@ -20,7 +20,7 @@ export class ChiefService {
     return this.myClient.get(url);
   }
   updateChief(id:any, data:any,token:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/users/${id}`;
+    const url = `${this.Base_URL}/api/v1/user/${id}`;
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.myClient.put(url,data, {headers});
   }

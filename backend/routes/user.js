@@ -1,11 +1,10 @@
 const express=require("express");
-const userRouter=express.Router();
-const { edit, remove, upload} = require("../controllers/user");
+const singleUserRouter =express.Router();
+const auth=require("../middleware/authenticationMiddleware");
+const {verifyChef}=require("../middleware/verifyChefMiddleware");
+const {removeUser, updateUser} =require("../controllers/user");
 
 
+singleUserRouter.route("/:id").put(auth,verifyChef, updateUser).delete(auth,verifyChef, removeUser);
 
-userRouter.delete("/:id", remove)
-userRouter.post("/:id",upload.single("img") ,edit)
-
-module.exports=userRouter;
-
+module.exports= singleUserRouter;
