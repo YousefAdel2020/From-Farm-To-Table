@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 class="my-4">{{title}}</h1>
+    <h1 class="my-4">{{name}}</h1>
     <div class="row">
   
       <div class="col-md-8">
@@ -9,12 +9,10 @@
   
       <div class="col-md-4">
         <strong><h2 class="my-3">Dish Description</h2></strong>
-        <p>{{content}}</p>
+        <p>{{description}}</p>
         <strong><h2 class="my-3">Dish Ingredients</h2></strong>
         <ul>
-          <li>Vegetables</li>
-          <li>Shellfish</li>
-          <li>Fishes</li>
+          <li>{{ingredients}}</li>
         </ul>
         <br><br>
         <div class="row">
@@ -30,11 +28,11 @@
   
     </div>
    
-    <strong><h2 class="my-3">Related Dishes</h2></strong>
+    <!-- <strong><h2 class="my-3">Related Dishes</h2></strong>
   
     <div class="row">
-        <div  class="col-md-3 col-sm-6 mb-4" *ngFor="let s of topDishes">
-            <app-card></app-card>
+        <div  class="col-md-3 col-sm-6 mb-4" *ngFor="let s of topDishes"> -->
+            <!-- <app-card></app-card> -->
          <!-- </div>
       <div class="col-md-3 col-sm-6 mb-4">
         <a href="#">
@@ -58,9 +56,9 @@
         <a href="#">
               <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
             </a>
-      </div> -->
+      </div> 
   
-    </div>
+    </div>-->
    
   
   </div>

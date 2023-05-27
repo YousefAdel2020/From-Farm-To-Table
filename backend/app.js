@@ -66,8 +66,11 @@ app.use("/api/v1/orders",orderRouter);
 app.get("/success.html",auth,success)
 
 //& for admin
+//user routes
 app.use("/api/v1/users",userRouter);
-  
+
+//dishes
+app.use("/api/v1/dishes", dishRouter);
 
 app.use(NotFoundMiddleware)
 app.use(errorHandlerMiddleware)

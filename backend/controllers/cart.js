@@ -22,7 +22,7 @@ const addToCart = async (req, res) => {
     throw new NotFoundError(`there is no user with this Id : ${userId}`);
   }
   console.log(user.firstName);
-  let dishInfo = { dishId, quantity: 1 };
+  let dishInfo = { dish, quantity: 1 };
   user.cart.push(dishInfo);
   await user.save();
 
@@ -68,7 +68,7 @@ const removeFromCart = async (req, res) => {
   if (!user) {
     throw new NotFoundError(`there is no user with this Id : ${userId}`);
   }
-  user.cart = user.cart.filter((item) => item.dishId != dishId);
+  user.cart = user.cart.filter((item) => item.dish._id!= dishId);
 
   await user.save();
 

@@ -9,5 +9,6 @@ authRouter.post("/register",upload.single("img"),register);
 authRouter.post("/login",login);
 
 
+
 module.exports=authRouter;
 
