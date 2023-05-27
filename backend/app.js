@@ -24,7 +24,7 @@ const userRouter=require("./routes/users");
 const cartRouter=require("./routes/cart");
 const orderRouter=require("./routes/orders");
 
-const {getMyOrders,createCheckoutSession,success} =require("./controllers/order");
+
 
 
 
@@ -63,7 +63,7 @@ app.use("/api/v1/cart",cartRouter);
 
 app.use("/api/v1/orders",orderRouter);
 
-app.get("/success.html",auth,success)
+
 
 //& for admin
 //user routes
