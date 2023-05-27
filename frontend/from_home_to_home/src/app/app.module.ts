@@ -43,6 +43,8 @@ import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.
 import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { OrderComponent } from './Components/order/order.compnent';
+
 
 
 
@@ -78,7 +80,9 @@ let routes:Routes = [
 
     DetailsDishComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+
+    OrderComponent
 
 
   ],

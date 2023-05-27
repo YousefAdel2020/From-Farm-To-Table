@@ -11,6 +11,7 @@ import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.
 import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
 import {CartComponent} from './Components/cart/cart.component';
 import {CheckoutComponent} from './Components/checkout/checkout.component';
+import { OrderComponent } from './Components/order/order.compnent';
 
 const routes: Routes = [
   {path:'updateChief', component:UpdateChiefComponent},
@@ -24,6 +25,8 @@ const routes: Routes = [
 {path:'viewDetails/:productId', component:DetailsDishComponent},
 {path:'cart', component:CartComponent},
 {path:'checkout', component:CheckoutComponent},
+
+{path:'orders', component:OrderComponent}
 
 ];
 
