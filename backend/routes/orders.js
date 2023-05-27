@@ -5,9 +5,11 @@ const auth=require("../middleware/authenticationMiddleware");
 
 
 
-const {getMyOrders} =require("../controllers/order");
+const {getMyOrders,createCheckoutSession} =require("../controllers/order");
 
-orderRouter.route("/").get(auth,getMyOrders);
+orderRouter.route("/").get(auth,getMyOrders).post(auth,createCheckoutSession);
+
+
 
 // orderRouter.route("/:dishId").post(auth,addToCart).delete(auth,removeFromCart);
 
