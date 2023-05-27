@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-card',
@@ -11,7 +12,9 @@ export class CardComponent {
   @Input() content!: string;
   @Input() ImageUrl!: string;
   @Input() product!:any;
-  constructor(private router: Router) {}
+
+  isAdded!:boolean;
+  constructor(private router: Router, private cartService:CartService) {}
 
   getRatingStars(rating: number): string {
     const maxRating = 5;
@@ -33,4 +36,17 @@ export class CardComponent {
    console.log(this.product._id);
    this.router.navigate(['/viewDetails', this.product._id]);
   }
+
+  addToCart(){
+    let token = localStorage.getItem('token');
+    let id = this.product._id;
+
+     //call the add to cart service 
+    this.cartService
+        .addToCart(id, token).subscribe(response=>{
+          console.log(response)
+          this.isAdded=true;
+        })
+
+    }
 }
