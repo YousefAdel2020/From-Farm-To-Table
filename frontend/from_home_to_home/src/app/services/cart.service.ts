@@ -34,7 +34,7 @@ export class CartService{
   removeFromCart(dishId:any):Observable<any>{
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
    
-    return this.myClient.put( `${this.Base_URL}/${dishId}`,{dishId},{headers})
+    return this.myClient.delete( `${this.Base_URL}/${dishId}`,{headers})
   }
 
 

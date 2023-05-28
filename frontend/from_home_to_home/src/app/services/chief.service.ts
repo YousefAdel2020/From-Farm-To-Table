@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,11 @@ export class ChiefService {
     const url = `${this.Base_URL}/api/v1/users/:userId`;
     return this.myClient.get(url);
   }
-  updateChief(chief:any):Observable<any>{
-    const url = `${this.Base_URL}/api/v1/users/update/:id`;
-    return this.myClient.put(url,chief);
+  updateChief(id:any, data:any,token:any):Observable<any>{
+    const url = `${this.Base_URL}/api/v1/user/${id}`;
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.myClient.put(url,data, {headers});
   }
-
 
  
 }
