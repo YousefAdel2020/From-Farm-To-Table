@@ -16,7 +16,7 @@ export class ChiefService {
   }
 
   getChiefbyID(id: string): Observable<any> {
-    const url = `${this.Base_URL}/api/v1/users/:userId`;
+    const url = `${this.Base_URL}/api/v1/users/${id}`;
     return this.myClient.get(url);
   }
   updateChief(id:any, data:any,token:any):Observable<any>{
