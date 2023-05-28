@@ -5,30 +5,30 @@
 <form [formGroup]="dishForm" (ngSubmit)="updateDish()">
 
     <div class="form-group  m-2 ">
-        <label class="col-3 fs-6 fst-italic" for="name"> Name</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center" for="name"> Name</label>
         <input  type="text" id="name" formControlName="name" value="{{ name }}"/>
     </div>
     <div class="form-group">
-        <label class="col-3 fs-6. fst-italic" for="category">Category</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center" for="category">Category</label>
         <select id="category" [(ngModel)]="selectedCategory" name="category">
           <option *ngFor="let category of categories" [value]="category" [selected]="category === selectedCategory" >{{ category }}</option>
         </select>
       </div>
     <div class="form-group">
-        <label class="col-3  fs-6 fst-italic" for="image">Image</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center" for="image">Image</label>
         <input type="file" id="image"   name="image" />
     </div>
     <div class="form-group  ">
-        <label class="col-3  fs-6 fst-italic "  for="description">description</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center "  for="description">description</label>
         <textarea id="description" formControlName="description" value="{{ description }}"></textarea>
     </div>
     <div class="form-group  ">
-        <label class="col-3  fs-6 fst-italic "  for=" ingredients"> ingredients</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center "  for=" ingredients"> ingredients</label>
         <input id="text" placeholder=" ingredients"  name=" ingredients" value={{ ingredients}}   >
     </div>
     
     <div class="form-group  ">
-        <label class="col-3  fs-6 fst-italic "  for="salary">price</label>
+        <label class="col-3 pt-5 fs-6 fst-italic text-center"  for="salary">price</label>
         <input type="number" id="price" formControlName="price" value="{{ price }}">
     </div>
 

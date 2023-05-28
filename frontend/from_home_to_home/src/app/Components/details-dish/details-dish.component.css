@@ -1,1 +1,36 @@
-.btn:hover{color: white}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Poppins', sans-serif; */
+}
+#containerP{
+  display: grid;
+  place-items: center;
+}
+#productDetail{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cardImg {
+  width: 300px !important;
+  border-radius: 5px;
+  padding: 2.5px;
+  transition: all 0.1s;
+  margin-right: 8px!important;
+}
+.cardImg:hover {
+  border: 1.8px solid rgba(0, 51, 255, 0.952);
+  width: 200px;
+}
+.addcart{
+    width: 50%;
+    height: 50px;
+    background-color: #6750A4;
+}
+.addcart:hover{
+    background-color: #7262a0;
+}

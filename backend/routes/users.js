@@ -5,7 +5,7 @@ const userRouter=express.Router();
 
 const auth=require("../middleware/authenticationMiddleware");
 const {verifyAdmin}=require("../middleware/verifyAdminMiddleware");
-// const {verifyChef}=require("../middleware/verifyChefMiddleware");
+//  const {verifyChef}=require("../middleware/verifyChefMiddleware");
 
 const {getAllUsers} =require("../controllers/user");
 

@@ -1,32 +1,38 @@
+body{
+  background: url('../../../assets/images/cut.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
 .main-login{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  width: 100%;
 
 }
 .login{
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  gap: 50px;
+    background: rgba(255, 255, 255,0.9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 .login h2{
-  font-size: 50px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  align-items: center;
-  width: 400px;
-  height: 60px;
-  margin-left: 100px;
-  padding-top: 10px;
-
+  
+    text-align: center;
+    margin-bottom: 20px;
+  
 }
 .container-form{
-  margin-left: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  width: 300px;
 
 }
 .login-photo{
@@ -35,36 +41,19 @@
   justify-content: right;
 
 }
-.img-log{
-  width: 100%;
-  border-radius: 15px;
-  height: 700px;
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f5f5f5;
+    font-size: 16px;
+    border: 1px solid black;
 }
 
-.form-fg {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-.form-fg input {
-  float: left;
-  width: 50%;
-  padding: 11px 45px 11px 20px;
-  border-radius: 10px;
-  border-top: #535353;
-  border-width: 1px;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
-}
-/* .form-fg i {
-  background-color: aqua;
-  /* position: absolute; 
-  margin-right: 60px;
-  top: 10px;
-  right: 10px;
-  font-size: 19px;
-  color: #616161
-} */
 
 .container-form label {
   font-weight: 500;
@@ -87,7 +76,7 @@
   background-color: #6750A4;
   color: #fff;
   border: 1px solid #6750A4;
-  width: 50%;
+  width: 100%;
   height: 50px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);

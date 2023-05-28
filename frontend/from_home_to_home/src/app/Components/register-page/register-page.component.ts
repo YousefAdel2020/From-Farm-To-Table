@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.services';
 })
 export class RegisterPageComponent {
 
+
   registerForm = new FormGroup({
     firstName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
     lastName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
@@ -18,11 +19,11 @@ export class RegisterPageComponent {
     phone: new FormControl(''),
     gender: new FormControl(''),
     role: new FormControl(''),
-    image: new FormControl('')
+    img: new FormControl('')
   });
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {}
-
+   
   
    validate(){
     if (this.registerForm.valid){
@@ -35,21 +36,23 @@ export class RegisterPageComponent {
       let phoneNumber= this.registerForm.controls["phone"].value;
       let gender= this.registerForm.controls["gender"].value;
       let role= this.registerForm.controls["role"].value || 'chef';
-      let img= this.registerForm.controls["image"].value;
+      let img= this.registerForm.controls["img"];
+
+   
 
       let data = {
         firstName,
-        lastName,
-        email,
-        password,
-        address,
+         lastName,
+         email,
+         password,
+         address,
         phoneNumber,
-        gender,
-        role,
-        img
+         gender,
+         role,
+         img
       }
      console.log(data);
-    this.register(data)
+     this.register(data)
     }
 
    }

@@ -3,14 +3,19 @@
         <div class="card-content">
             <h2>{{title}}</h2>
             <p>{{content}}</p>
+            <p>Description: {{ description }}</p>
+            <p>Price: {{ price }}$</p>
             <div class="rating">
               <div [innerHTML] ="getRatingStars(2)"></div>
               </div>
-              <button (click)="handleDetailsClick()">Details</button>
-            <button (click)="addToCart()" *ngIf="!isAdded; else addToCartBlock ">Order Now</button>
-            <ng-template #addToCartBlock>
-              <button style="opacity: 0.7;" >Added!</button>
-            </ng-template>
+              <div class="buttons">
+                <button (click)="handleDetailsClick()">Details</button>
+                <button (click)="addToCart()" *ngIf="!isAdded; else addToCartBlock ">Order Now</button>
+                <ng-template #addToCartBlock>
+                  <button style="opacity: 0.7;" >Added!</button>
+                </ng-template>
+              </div>
+            
         </div>
  </div>
     
