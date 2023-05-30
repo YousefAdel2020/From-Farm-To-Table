@@ -1,93 +1,88 @@
-<div class="main-cart">
-    <div class="main-container">
-        <h2>Your Cart</h2>
-          <h3 *ngIf="isEmpty; else isEmptyElseBlock ">Cart is Empty</h3>
-          <ng-template #isEmptyElseBlock>
-            <button (click)="clearCart()">Clear Cart</button>
-          </ng-template>
-       <div class="cart-container"  *ngFor="let d of dishes">
-           <div class="item">
-                <img src="https://assets.cookfood.net/product_916_2793.jpg" />
-                
-                <div class="details" data-price="15.50">
-                    <h3>{{d.dish.name}}</h3>
-                    <p >{{d.dish.description}}</p>
-                
-                </div>
-                <div class="inner_container">
-                    <div class="quantity">
-                        <button class="minus-btn"><i class="fa fa-minus"></i></button>
-                        <input type="number" value="1" min="1" max="100">
-                        <button class="plus-btn"><i class="fa fa-plus"></i></button>
-                      </div>
-                      <div class="price" >
-                        <p>Price : {{d.dish.price}}$</p>
-                      </div>
-                </div>
-                <span class="close-icon"><i class="fa fa-close"></i></span>
-
-                <button (click)="removeFromCart(d.dish._id)">Remove from cart</button>
-
-            </div> 
-            
-            <!-- <div class="item">
-                <img src="https://assets.cookfood.net/product_916_2793.jpg" />
-                
-                <div class="details" data-price="15.50">
-                    <h3>Forno</h3>
-                    <p >Description,is simply dummy text of the printing and typesetting industry.
-                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                
-                </div>
-                <div class="inner_container">
-                    <div class="quantity">
-                        <button class="minus-btn"><i class="fa fa-minus"></i></button>
-                        <input type="number" value="1" min="1" max="100">
-                        <button class="plus-btn"><i class="fa fa-plus"></i></button>
-                      </div>
-                      <div class="price" >
-                        <p>Price: 15$</p>
-                      </div>
-                </div>
-                <span class="close-icon"><i class="fa fa-close"></i></span>
-
-            </div> -->
+ <main id="main">
+    <div
+      class="Checkout"
+      style="
+        background-image: url(https://images.unsplash.com/photo-1564495584622-0bb3af6f668e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+      "
+    >
+      <div class="container">
+        <div class="cart-headers">
+            <h2 style="color:white">Your Cart</h2>
+            <h3 *ngIf="isEmpty; else isEmptyElseBlock ">Cart is Empty</h3>
+            <ng-template #isEmptyElseBlock>
+              <button class="btn btn-danger" (click)="clearCart()">Clear Cart</button>
+            </ng-template>
         </div>
-        <div class="total-part">
-            <div class="Address-pay">
-                <div class="Address">
-                    <h3>Delivery Address</h3>
-                    <p>46 Vale Road
-                      Ramsgate</p>
+        <div class="row">
+          <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+            <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="border-0 bg-light">
+            <div class="p-2 px-3 text-uppercase">Product</div>
+          </th>
+          <th scope="col" class="border-0 bg-light">
+            <div class="py-2 text-uppercase">Price</div>
+          </th>
+          <th scope="col" class="border-0 bg-light">
+            <div class="py-2 text-uppercase">Quantity</div>
+          </th>
+          <th scope="col" class="border-0 bg-light">
+            <div class="py-2 text-uppercase">Remove</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+          <ng-container >
+            <tr *ngFor="let d of dishes">
+            <td scope="row" class="border-0">
+              <div class="d-flex align-items-center">
+                <img
+                  class="imgg mr-3"
+                  src="https://assets.cookfood.net/product_916_2793.jpg"
+                  alt=""
+                  width="70"
+                />
+                <div>
+                  <h5 class="mb-0">
+                    <a class="text-dark" >{{d.dish.name}}</a>
+                  </h5>
+                  <span class="text-muted font-weight-normal font-italic">{{d.dish.category}}</span>
                 </div>
-                <div class="pay">
-                    <h3>Payment Card</h3>
-                    <p> **** **** **** 8678</p>
-                </div>
-            </div>
-            <div class="cupon">
-                <h3>Apply Coupon</h3>
-                <input class="coupon-input" type="text">
-            </div>
-            <div class="total">
-                <div class="back-shop">
-                    <div class="sub-total">
-                        <em>Sub Total: </em><span class="amount">26.50$</span>
-                    </div>
-                    <div class="taxes">
-                        <em>Plus VAT: </em><span class="amount">@ 20%</span>
-                      </div>
-                      <a href="#" class="btn-reverse">Continue Shopping</a>
-                </div>
-                <div class="go-checkout">
-                    <div class="allamount">
-                        <em>Total: </em><span class="amount">30$</span>
-                    </div>
-                    <a href="#" class="btn-checkout">Checkout</a>
-                </div>
-                
-            </div>
+              </div>
+            </td>
+            <td class="border-0 align-middle">
+              <strong>{{d.dish.price}}$</strong>
+            </td>
+            <td class="quantity border-0 align-middle">
+              <div class="d-flex align-items-center">
+                <button class="minus-btn" type="button">-</button>
+                <input  class="quantity-input" type="number" [disabled]="true" />
+                <button  class="plus-btn" type="button">+</button>
+              </div>
+            </td>
+            <td class="border-0 align-middle">
+                <a (click)="removeFromCart(d.dish._id)" class="text-dark"> 
+                <i class="fa fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+         </ng-container> 
+      </tbody>
+    </table>
+  </div>
+              <button
+                class="btn btn-lg"
+                class="checkout-btn"
+                (click)="checkout()"
+                type="submit"
+              >
+                <span>Checkout</span>
+              </button>
+          </div>
         </div>
+      </div>
     </div>
-    
-</div>
+  </main> 
+ 

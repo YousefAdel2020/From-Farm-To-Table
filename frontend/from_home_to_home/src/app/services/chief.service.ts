@@ -25,6 +25,5 @@ export class ChiefService {
     return this.myClient.put(url,data, {headers});
   }
 
-
  
 }

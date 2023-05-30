@@ -30,6 +30,7 @@ const getMySingleOrder=async (req, res) => {
 };
 
 const createCheckoutSession = async (req, res) => {
+  console.log('in checkout')
   const { userId } = req.user;
   const user = await User.findById(userId);
   if (!user) {
@@ -53,9 +54,10 @@ const createCheckoutSession = async (req, res) => {
     payment_method_types: ["card"],
     mode: "payment",
     line_items: lineItems,
-    success_url: `http://localhost:5500/success.html`,
-    cancel_url: `http://localhost:5500/cancel.html`,
+    success_url: `http://localhost:4200/paymentSuccessful`,
+    cancel_url: `http://localhost:4200/cart`,
   });
+
 
   res.json({ url: session.url });
 };
@@ -70,7 +72,8 @@ const createOrder = async (req, res) => {
   let dishesArray = [];
   const dishes = user.cart.forEach((item) => {
     total_price += item.dish.price * item.quantity;
-    let dishItem = { dish: item.dish._id, quantity: item.quantity };
+    console.log(item.dish.name)
+    let dishItem = { dish: item.dish, quantity: item.quantity };
     dishesArray.push(dishItem);
   });
   const order = await Order.create({
@@ -86,6 +89,9 @@ const createOrder = async (req, res) => {
 
   res.status(StatusCodes.CREATED).json({ order });
 };
+
+
+
 
 module.exports = {
   getAllMyOrders,

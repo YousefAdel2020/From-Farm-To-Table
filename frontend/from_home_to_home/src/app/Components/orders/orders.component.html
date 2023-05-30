@@ -1,0 +1,35 @@
+<div>
+    <table class="table align-middle mb-0 bg-white" style="height: 600px; margin: 20px;">
+      <thead class="bg-light">
+        <tr>
+          <th>id</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let o of orders; let orderIndex = index">
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">{{o._id}}</div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">{{o.totalPrice}}$</p>
+            </td>
+            <td>
+              <span class="badge badge-success rounded-pill d-inline">{{o.status}}</span>
+            </td>
+            <!-- <td *ngFor="let d of dishes; let dishIndex = index">
+              <ul>
+                <li>{{d.name}}</li>
+              </ul>
+            </td> -->
+            <td>
+              <p class="fw-normal mb-1">{{o.createdAt}}</p>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
