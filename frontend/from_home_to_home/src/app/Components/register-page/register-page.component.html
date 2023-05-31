@@ -1,0 +1,128 @@
+<body>
+<div class="container">
+    <div class="form-container">
+      <form id="register_form" (ngSubmit)="validate()" [formGroup]="registerForm">
+        <h2>Register</h2>
+              <div class="flexbox">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input formControlName="firstName"type="text" id="first-name" name="first-name"  required>
+              </div>
+
+             
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input formControlName="lastName" type="text" id="last-name" name="last-name"  required>
+              </div>
+            </div>
+            
+            <div *ngIf="!fname && isfNameDirty()">
+              <span
+                class="bg-danger rounded-1 bg-gradient text-light p-1 m-1 d-block"
+                >Name should be longer than 3 chars</span
+              >
+            </div>
+
+            <div *ngIf="!lname && islNameDirty()">
+              <span
+                class="bg-danger rounded-1 bg-gradient text-light p-1 m-1 d-block"
+                >Name should be longer than 3 chars</span
+              >
+            </div>
+
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input formControlName="email" type="email" id="email" name="email" required>
+        </div>
+        <div *ngIf="!email && isEmailDirty()">
+          <span
+            class="bg-danger rounded-1 bg-gradient text-light p-1 m-1 d-block"
+            >Enter a vaild email address, this filed is required</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input formControlName="password" type="password" id="password" name="password" required>
+        </div>
+        <div *ngIf="!password && isPasswordDirty()">
+          <span
+            class="bg-danger rounded-1 bg-gradient text-light p-1 m-1 d-block"
+            >Password Should be longer than 6 chars</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input formControlName="address" type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input formControlName="phone" type="tel" id="phone" name="phone" required>
+        </div>
+
+       <div class="form-group radio-inputs">
+        <label for="role"  style="color: purple;">Gender</label>
+        <div>
+        <div class="radio-gp">
+          <label for="male">Male</label>
+          <input
+          type="radio"
+          formControlName="gender"
+          value="Male"
+        />
+        
+      </div>
+      <div class="radio-gp">
+        
+        <label for="Female">Female</label>
+        <input
+          type="radio"
+          formControlName="gender"
+          value="Female"
+        />
+      </div>
+        
+      </div>
+        
+   </div>
+
+        <div class="form-group radio-inputs">
+            <label for="role"  style="color: purple;">Role</label>
+            <div>
+            <div class="radio-gp">
+              <label for="customer">Customer</label>
+              <input
+              type="radio"
+              formControlName="role"
+              value="customer"
+            />
+            
+          </div>
+          <div class="radio-gp">
+            
+            <label for="chef">Chef</label>
+            <input
+              type="radio"
+              formControlName="role"
+              value="chef"
+            />
+          </div>
+            
+          </div>
+            
+       </div>
+        <div class="form-group">
+          <label for="img">Upload Image</label>
+          <div class="file-group">
+            <input formControlName="img" type="file" id="img" name="img" class="file-input" required />
+            <label for="img" class="file-label">Choose file</label>
+            <div class="file-name"></div>
+          </div>
+        </div>
+        
+        
+        <button type="submit" id="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+</body>

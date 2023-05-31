@@ -1,0 +1,88 @@
+body{
+  background: url('../../../assets/images/cut.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+.main-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  width: 100%;
+
+}
+.login{
+    background: rgba(255, 255, 255,0.9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+.login h2{
+  
+    text-align: center;
+    margin-bottom: 20px;
+  
+}
+.container-form{
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 300px;
+
+}
+.login-photo{
+  width: 50%;
+  display: flex;
+  justify-content: right;
+
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f5f5f5;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+
+.container-form label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5px
+}
+
+.container-form .forgot {
+  margin: 0;
+  line-height: 45px;
+  color: #535353;
+  font-size: 15px;
+  float: right
+}
+.btn-login{
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 10px;
+  text-decoration: none;
+  background-color: #6750A4;
+  color: #fff;
+  border: 1px solid #6750A4;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+.btn-login:hover{
+  background-color: #7f6ab8;  
+}

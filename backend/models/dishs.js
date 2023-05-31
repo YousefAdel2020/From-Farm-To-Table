@@ -27,11 +27,16 @@ const dishSchema = new mongoose.Schema({
       type: Number,
       required: true
     },
+    rating: {
+      type: Number,
+      minlength: 0,
+      maxlength: 5,
+    },
     chef: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     }
-  });
+  },{timestamps:true});
 
 
 

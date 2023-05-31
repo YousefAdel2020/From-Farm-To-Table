@@ -1,0 +1,110 @@
+<!-- <div class="container">
+
+    <h1 class="my-4">{{name}}</h1>
+    <div class="row">
+  
+      <div class="col-md-8">
+        <img class="img-fluid" src="../../../assets/home/home-banner.jpg" style="width: 700px;height: 500px;" alt="">
+      </div>
+  
+      <div class="col-md-4">
+        <strong><h2 class="my-3">Dish Description</h2></strong>
+        <p>{{description}}</p>
+        <strong><h2 class="my-3">Dish Ingredients</h2></strong>
+        <ul>
+          <li>{{ingredients}}</li>
+        </ul>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-7"></div>
+           <div class="col-sm-5 text-secondary d-flex mt-2">
+              <button class="btn m-4 px-4 grid btn1 btn-dark">
+                <a class="text-decoration-none" style="color: white;" routerLink="/">Add To Cart </a>
+              </button> 
+          </div> 
+        </div>
+      </div>
+      
+  
+    </div>
+    -->
+    <!-- <strong><h2 class="my-3">Related Dishes</h2></strong>
+
+    <div class="row">
+        <div  class="col-md-3 col-sm-6 mb-4" > 
+            <app-card></app-card>
+          </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+              <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+      </div>
+  
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+              <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+      </div>
+  
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+              <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+      </div>
+  
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+              <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+      </div> 
+  
+    </div>
+   
+  
+  </div>
+  -->
+
+
+
+  <div class="container py-5 ml-5" id="containerP">
+    <div class="row" id="productDetail">
+        <div class="col-sm-12  col-md-6 col-lg-6 px-3 d-flex  justify-content-lg-center   justify-content-md-center pb-3 "
+            style="height: 550px;">
+            <img class="img-fluid "
+                src="../../../assets/images/pizza1.jpg"
+                alt="" style="height: 100%;" id="mainImg">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 px-0 d-flex flex-column justify-content-center px-2 " style="height: 550px;">
+            <h1 style="font-size: 50px; height: 80px; padding-top: 10px;">{{ name }}</h1>
+            <p style="font-size: 25px;height: 50px;">{{ ingredients }}</p>
+            <p style="font-size: 25px;height: 50px;">Price: <span class="text-primary">{{ price }}$</span> </p>
+            <p style="font-size: 25px;height: 50px;" class="font-weight-bold">Description</p>
+            <p style="font-size: 20px;height: 50px;" class="font-weight-light">{{ description }}</p>
+            <div style=" width: 400px; height: 200px;" class="container">
+                <div class="row ">
+                    <div class="col-12 ">
+                        <div class="row w-300 d-flex justify-content-left flex-wrap">
+                            <div class="col-2 px-0">
+                                <img class="cardImg img-fluid px-0 "
+                                    src="../../../assets/images/pizza2.jpg"
+                                    alt="" style="height:100px;width: 200px;" onclick="onClickFun(this)">
+                            </div>
+                            <div class="col-2 px-0">
+                                <img class="cardImg img-fluid px-0"
+                                    src="../../../assets/images/pizza3.jpg"
+                                    alt="" style="height:100px;width: 200px;" onclick="onClickFun(this)">
+                            </div>
+                            <div class="col-2 px-0">
+                                <img class="cardImg img-fluid px-0"
+                                    src="../../../assets/images/pizza4.jpg"
+                                    alt="" style="height:100px;width: 200px;" onclick="onClickFun(this)">
+                            </div>
+                          
+                        </div>
+                        <button type="button" class="text-capitalize btn btn-primary mt-5 addcart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

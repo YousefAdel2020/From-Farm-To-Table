@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background: url('../../../assets/images/register.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    width: 100%;
+  }
+  .form-container {
+    background: rgba(255, 255, 255,0.9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f5f5f5;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+
+  .flexbox
+  {
+    display: flex;
+
+    gap: 10px;
+  }
+
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../../../assets/images/arrow-down.jpg') no-repeat right center;
+    position: relative;
+  }
+  .form-group select option:first-child {
+    display: none;
+    }
+    
+    .form-group button {
+    margin-top: 20px;
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+.form-group button:hover {
+    background: #3e8e41;
+}
+.form-group input[type="file"] + label:hover {
+    background: #ddd;
+ }
+ @media screen and (max-width: 768px) {
+    .form-container {
+    padding: 20px;
+    }
+    .container {
+        display: flex;
+        margin-right: 100px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+    .container {
+        margin-left: 0;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group button {
+    font-size: 14px;
+    }
+    }
+    
+    @media screen and (max-width: 360px) {
+    .container {
+        margin-left: 0;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group button {
+    font-size: 12px;
+    }
+    }
+    
+      /* style for radio button  */
+:focus {
+    outline: 0;
+    border-color: #6750A4;
+    box-shadow: 0 0 0 4px #b5c9fc;
+  }
+
+  .mydict div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  .mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .mydict input[type="radio"]:checked + span {
+    box-shadow: 0 0 0 0.0625em #6750A4;
+    background-color: #9281c1;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: .05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color .5s ease;
+  }
+  
+  label:first-child span {
+    border-radius: .375em 0 0 .375em;
+  }
+  
+  label:last-child span {
+    border-radius: 0 .375em .375em 0;
+  }
+  
+  
+  /* style for register button */
+  
+  #submit-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+    width: 100%;
+  }
+  
+  #submit-btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  
+  
+  /* upload image */
+  
+  /* Hide the default file input button */
+  .file-input {
+    display: none;
+  }
+  
+  /* Style the file input container */
+  .file-group {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  /* Style the "Choose file" label */
+  .file-label {
+    display: inline-block;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Style the selected file name */
+  .file-name {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 12px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  /* Show the selected file name */
+  .file-input:focus + .file-label + .file-name {
+    display: block;
+  }
+
+  .radio-inputs{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .radio-inputs .radio-gp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .radio-inputs .radio-gp input{
+   width: 50%;
+
+  }
+  .radio-inputs .radio-gp label{
+    width: 50%;
+ 
+   }

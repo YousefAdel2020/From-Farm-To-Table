@@ -5,10 +5,10 @@ const orderSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     },
-    chef: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
-    },
+    // chef: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: 'User'
+    // },
     dishes: [{
         dish: {
           type: mongoose.Schema.Types.ObjectId,
@@ -26,14 +26,10 @@ const orderSchema = new mongoose.Schema({
     },
     status: {
       type: String,
-      enum: ['pending', 'in progress', 'shipped','delivered'],
+      enum: ['pending', 'in_progress', 'shipped','delivered'],
       default: 'pending'
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
     }
-  });
+  },{timestamps:true});
 
 
 module.exports= mongoose.model('Order', orderSchema);
