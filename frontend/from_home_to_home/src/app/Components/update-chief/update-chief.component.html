@@ -5,32 +5,32 @@
     <form [formGroup]="updateCheifForm" (ngSubmit)="updatechief()">
 
         <div class="form-group  m-2 ">
-            <label class="col-3 fs-6 fst-italic" for="firstName">First Name</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="firstName">First Name</label>
             <input  type="text" id="firstName"  value="{{firstName}}" name="firstName" />
         </div>
         <div class="form-group  m-2 ">
-            <label class="col-3 fs-6 fst-italic" for="lastName">Last Name</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="lastName">Last Name</label>
             <input  type="text" id="lastName" value="{{lastName}}" name="lastName" />
         </div>
         <div class="form-group  m-2">
 
-            <label class="col-3 fs-6 fst-italic" for="email">Email</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="email">Email</label>
             <input  type="email" id="email" [(ngModel)]="email" value="{{ email }}" name="email" />
         </div>
         <div class="form-group m-2">
-            <label class="col-3 fs-6 fst-italic" for="phone">Phone</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="phone">Phone</label>
             <input  type="tel" id="phone" [(ngModel)]="phoneNumber"  value="{{ phoneNumber }}" name="phone" />
         </div>
         <div class="form-group  m-2">
-            <label class="col-3 fs-6 fst-italic" for="address">Address:</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="address">Address:</label>
             <input  type="text" id="address" [(ngModel)]="address" value="{{ address }}"    name="address" />
         </div>
         <div class=" form-group  m-2">
-            <label class="col-3  fs-6 fst-italic" for="image">Image</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center" for="image">Image</label>
             <input type="file" id="image"  value="{{ img }}" name="image" />
         </div>
         <div class="form-group  ">
-            <label class="col-3  fs-6 fst-italic "  for="summary">About me</label>
+            <label class="col-3 pt-5 fs-6 fst-italic text-center"  for="summary">About me</label>
             <textarea id="summary" value="{{ summary }}" name="summary" ></textarea>
         </div>
        

@@ -10,15 +10,14 @@ import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class UpdateDishesComponent implements OnInit {
 categories = ['Dessert', 'Savory'];
-  selectedCategory: string = 'Dessert';
+  selectedCategory: string = 'Savory';
   category!:string;
   description!: string;
   name!: string;
   price!: string;
-  ingredients!: string;
+  ingredients =[];
   dishId: string | null = null;
   dishForm!: FormGroup;
-  Dish:any;
   constructor(private route: ActivatedRoute,private router: Router,private formBuilder: FormBuilder,private dishService: DishService) {}
 
   ngOnInit(): void {
@@ -32,16 +31,36 @@ categories = ['Dessert', 'Savory'];
       this.ingredients = response.dish.ingredients[0];
    })
     
-  }
-
-   updateDish() {
   
-   }
 
-  resetForm() {
+    // create the dish form
+    this.dishForm = this.formBuilder.group({
+      name: [this.name],
+      category: 'Savory',
+      description: [this.description],
+      price: [this.price],
+      ingredients: this.formBuilder.array(this.ingredients.map(ingredient => this.formBuilder.control(ingredient))),
+    });
+   }
+ 
+   resetForm() {
     // Reset the form fields to their default values
     this.dishForm.reset({
       category: 'Dessert'
     });
+    this.router.navigate(['/dishes']);
   }
+  updateDish() {
+    const id = this.dishId;
+    const data = this.dishForm.value;
+    let token = localStorage.getItem('token');
+    this.dishService.updateDish(id, data, token).subscribe(response => {
+      console.log('Updated dish:', response);
+      // redirect to the details page for the updated dish
+      
+    });
+    this.resetForm();
+  }
+ 
+
 }

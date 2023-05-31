@@ -18,11 +18,20 @@
     .card-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    /* overflow-y: hidden; */
     }
 
     .card-content p {
     font-size: 16px;
     margin-bottom: 20px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
     }
 
     .card-content button {
@@ -33,7 +42,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-     margin-left: 140px; 
+     /* margin-left: 140px;  */
     }
 
     .card-content button:hover {
@@ -55,3 +64,4 @@
         padding: 10px;
     }
 }
+

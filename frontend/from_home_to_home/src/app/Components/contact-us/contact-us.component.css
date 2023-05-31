@@ -1,0 +1,44 @@
+/* div of about us title */
+.contact_us_div{
+    width: 100%;
+    position: center;
+    margin-top: 60px;
+}
+
+/* about us title */
+.my-title{
+    font-size: 45px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+} 
+
+
+/* some edits in contact cards images */
+.img_div{
+  width: 5%;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.sub-btn {
+  background-color:#6750A4;
+  margin-bottom: 100px;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: small;
+  border: none;
+}
+
+.sub-btn:hover{
+  background-color:white;
+  color: #7f6ab8;
+  border: 1px solid #7f6ab8;
+}

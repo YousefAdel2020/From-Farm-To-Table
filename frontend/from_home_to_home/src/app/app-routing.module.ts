@@ -11,16 +11,17 @@ import { UpdateDishesComponent } from './Components/update-dishes/update-dishes.
 import { DetailsDishComponent } from './Components/details-dish/details-dish.component';
 import {CartComponent} from './Components/cart/cart.component';
 import {CheckoutComponent} from './Components/checkout/checkout.component';
+import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { SuccessComponent } from './Components/success/success.component';
 import { OrdersComponent } from './Components/orders/orders.component';
 
 const routes: Routes = [
-  {path:'updateChief', component:UpdateChiefComponent},
+  {path:'updateChief/:id', component:UpdateChiefComponent},
   {path:'viewChief', component:ProfileChiefComponent},
   {path:'dishes', component:DishesComponent},
   {path:'updateUser', component:UpdateUserComponent},
   {path:'viewUser', component:ProfileUserComponent},
-
+  {path:'contactus', component:ContactUsComponent},
 {path:'createDishes', component:CreateDishesComponent},
 {path:'updateDishes/:dishId', component:UpdateDishesComponent},
 {path:'viewDetails/:productId', component:DetailsDishComponent},

@@ -12,6 +12,8 @@ export class CardComponent {
   @Input() content!: string;
   @Input() ImageUrl!: string;
   @Input() product!:any;
+  @Input() price!: any;
+  @Input() description!:string;
 
   isAdded!:boolean;
   constructor(private router: Router, private cartService:CartService) {}

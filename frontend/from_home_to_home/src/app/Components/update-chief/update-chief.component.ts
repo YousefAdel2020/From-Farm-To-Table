@@ -64,8 +64,9 @@ export class UpdateChiefComponent implements OnInit {
   updatechief(){
     const userid=this.id;
     const data = this.updateCheifForm.value;
+    console.log(data);
     let token = localStorage.getItem('token');
-    this.chiefService.updateChief(userid, data, token).subscribe(response => {
+    this.chiefService.updateChief(userid ,data, token).subscribe(response => {
       console.log('Updated cheif:', response);
       // redirect to the details page for the updated dish
       

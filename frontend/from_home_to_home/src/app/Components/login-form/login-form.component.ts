@@ -26,7 +26,7 @@ export class LoginFormComponent {
   }
 
   login(email:any, password:any) {
-       
+    console.log(email,password);   
     this.authService
       .login(email, password)
       .subscribe((response) => {
